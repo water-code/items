@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优酷 - 你的热爱 正在热播</title>
+	<link rel="stylesheet" href="style.css" />
+	<base target="_blank"> <!-- 表示所有链接都以新窗口打开 -->
+</head>
+<body>
+	<!-- 页面头部分 -->
+	<header>
+		<nav class="iot_container">
+			<!-- logo部分 -->
+			<a href="https://www.youku.com/" >
+				<img src="images/logo.png" title="优酷"/>
+			</a>
+			<!-- 搜索框部分 -->
+			<div class="iot_search">
+				<input type="text" placeholder="变形金刚" class="iot_text" />   <!-- 文本框部分 -->
+				<a href="https://acz.youku.com/wow/ykpage/act/top_hot?spm=a2ha1.14919748_WEBHOME_GRAY.youku-search-box.5~5~A" 
+				class="iot_hot" target="blank"></a> <!-- 小火苗部分 -->
+				<a href="https://acz.youku.com/wow/ykpage/act/top_hot?spm=a2ha1.14919748_WEBHOME_GRAY.youku-search-box.5~5~A" 
+				class="iot_word" target="_blank">热搜榜</a> <!-- 文字热搜榜部分 -->
+				<!-- target="_blank"表示当点击小火苗或热搜榜时在新窗口打开 -->
+				<a href="#" class="iot_tubiao">
+					<img src="images/search.png" /><!-- 搜索图标部分 -->
+				</a> 
+				<label class="iot_checkBox" for="control"></label>
+				<input type="checkbox" id="control" class="iot_check"><!-- 点击按钮部分 -->
+				<ul>      <!-- 搜索框下拉菜单部分-->           
+					<li>热门搜索</li>
+					<li><a href="https://so.youku.com/search_video/q_%E4%B9%A1%E6%9D%91%E7%88%B1%E6%83%8514?searchfrom=4">
+						<span id="iot_one">1</span> &nbsp;&nbsp;&nbsp;乡村爱情14&nbsp;
+					    </a>
+					    <span id="iot_1">爆</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E4%B8%8D%E4%BC%9A%E6%81%8B%E7%88%B1%E7%9A%84%E6%88%91%E4%BB%AC?searchfrom=4" target="_blank">
+						<span id="iot_two">2</span> &nbsp;&nbsp;&nbsp;不会恋爱的我们
+					    </a>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E7%9B%9B%E8%A3%85?searchfrom=4" >
+						<span id="iot_three">3</span> &nbsp;&nbsp;&nbsp;盛装&nbsp;
+					    </a>
+					    <span id="iot_3">荐</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E9%95%BF%E6%B4%A5%E6%B9%96?searchfrom=4" >
+							4 &nbsp;&nbsp;&nbsp;长津湖&nbsp;
+						</a>
+						<span id="iot_4">火</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E6%98%94%E6%9C%89%E7%90%89%E7%92%83%E7%93%A6?searchfrom=4" >
+							5 &nbsp;&nbsp;&nbsp;昔有琉璃瓦&nbsp;
+						</a>
+						<span id="iot_5">荐</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E9%BA%BB%E8%8A%B1%E7%89%B9%E5%BC%80%E5%BF%83?searchfrom=4" >
+							6 &nbsp;&nbsp;&nbsp;麻花特开心&nbsp;
+						</a>
+						<span id="iot_6">火</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E9%9D%92%E6%98%A5%E5%AE%88%E8%89%BA%E4%BA%BA?searchfrom=4" >
+							7 &nbsp;&nbsp;&nbsp;青春守艺人&nbsp;
+						</a>
+						<span id="iot_7">荐</span>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E6%B1%AA%E6%B1%AA%E9%98%9F%E7%AB%8B%E5%A4%A7%E5%8A%9F%20%E7%AC%AC%E5%85%AD%E5%AD%A3?searchfrom=4" >
+							8 &nbsp;&nbsp;&nbsp;汪汪队立大功 第六季
+						</a>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E5%B0%8F%E7%8C%AA%E4%BD%A9%E5%A5%87%20%E7%AC%AC%E5%85%AB%E5%AD%A3%20%E4%B8%8B%E9%83%A8?searchfrom=4" >
+							9 &nbsp;&nbsp;&nbsp;小猪佩奇 第八季 下部
+						</a>
+					</li>
+					<li><a href="https://so.youku.com/search_video/q_%E4%BB%8A%E7%94%9F%E6%9C%89%E4%BD%A0?searchfrom=4" >
+							10&nbsp;&nbsp;今生有你
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 右侧导航栏部分 -->
+			<div class="iot_monkey"> <!-- 小猴子图片部分 -->
+				<div class="iot_unlisted">未登录</div>
+			</div> 
+			<ul class="iot_right">
+				<li class="iot_vip"> <!-- 开通会员开始 -->
+					<img src="images/vip.png" id="iot_access"/>
+					<span>开通会员</span>
+					<!-- 1.右上角小图标开始 -->
+					<div class="iot_mark">0.2元/天</div>
+					<!-- 1.右上角小图标结束 -->
+					<!-- 2.开通会员悬浮菜单开始 -->
+			 		<div class="iot_vip1">
+				 		<img src="images/sanjiao.png" class="iot_sj"/>
+				 		<ul>
+					 		<li>
+						 		<img src="images/vip-1.png" />
+						 		<a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.vipyindao.81">
+						 		会员精选内容
+						 		</a>
+					 		</li>
+							<li>
+						 		<img src="images/vip-2.png" />
+						 		<a href="https://home.vip.youku.com/privilege?spm=a2ha1.14919748_WEBHOME_GRAY.vipyindao.114">
+						 		了解VIP特权
+						 		</a>
+							</li>
+					 		<li>
+								<img src="images/vip-3.png" />
+						 		<a href="https://home.vip.youku.com/vgrade?spm=a2ha1.14919748_WEBHOME_GRAY.vipyindao.103">了解会员等级</a>
+							</li>
+							<li><a href="#">立即登录</a></li>
+				 		</ul>
+			 		</div>
+					<!-- 2.开通会员悬浮菜单结束 -->
+				</li>    <!-- 开通会员结束 -->
+				<li class="iot_record"> <!-- 播放记录开始 -->
+					<img src="images/record.png" id="iot_clock"/>
+					<img src="images/record-change.png" id="iot_rd_change"/>
+					<span>播放记录</span>
+				</li>  <!-- 播放记录结束 -->
+				<li class="iot_attention"> <!-- 关注开始 -->
+					<img src="images/attention.png" id="iot_at"/>
+					<img src="images/attention-change.png" id="iot_at_change"/>
+					<span>关注</span>
+				</li> <!-- 关注结束-->
+				<li class="iot_upload">  <!-- 上传开始 -->
+					<img src="images/upload.png" id="iot_up"/>
+					<img src="images/upload-change.png" id="iot_up_change"/>
+					<span>上传</span>
+					<!-- 上传悬浮菜单开始 -->
+					<div class="iot_up_menu"> 
+						<img src="images/sanjiao.png" class="iot_sj"/>
+						<ul>
+							<li>
+								<img src="images/up.png" />
+								<a href="#">上传视频</a>
+							</li>
+							<li>
+								<img src="images/video.png" />
+								<a href="#">视频管理</a>
+							</li>
+							<li>
+								<img src="images/channel.png" />
+								<a href="#">我的自频道</a>
+							</li>
+							<li>
+								<img src="images/analyse.png" />
+								<a href="#">数据分析</a>
+							</li>
+						</ul>
+					</div>   
+					<!-- 上传悬浮菜单结束 -->
+				</li>  <!-- 上传结束 -->
+				<li class="iot_customer"> <!-- 客户端开始 -->
+					<img src="images/customer.png" id="iot_cs"/>
+					<img src="images/customer-change.png" id="iot_cs_change"/>
+					<span>客户端</span>
+					<!-- 客户端悬浮菜单开始 -->
+					<div class="iot_cs_menu"> 
+						<img src="images/sanjiao.png" class="iot_sj"/>
+						<ul>
+							<li>
+								<img src="images/HD.png" />
+								<a href="#">1080P限免</a>
+							</li>
+							<li>
+								<img src="images/fluent.png" />
+								<a href="#">流畅播放</a>
+							</li>
+							<li>
+								<img src="images/off-line.png" />
+								<a href="#">极速离线下载</a>
+							</li>
+							<li>
+								<a href="#">立即体验</a>
+							</li>
+						</ul>
+					</div> 
+					<!-- 客户端悬浮菜单结束 -->
+				</li> <!-- 客户端结束 -->
+				<li class="iot_phone"> <!-- 手机端开始 -->
+					<img src="images/phone.png" id="iot_ph"/>
+					<img src="images/phone-change.png" id="iot_ph_change"/>
+					<span>手机端</span>
+					<!-- 右上角小图标开始 -->
+					<div class="iot_free">送免广</div>
+					<!-- 右上角小图标结束 -->
+					<!-- 手机端悬浮二维码开始 -->
+					<div class="iot_ph_menu">
+						<img src="images/sanjiao.png" class="iot_sj"/>
+						<p>使用手机扫描二维码下载优酷，手机端新用户最高可领7天免广权益(PC端/移动端通用)</p>
+						<div class="iot_code"></div>
+					</div>
+					<!-- 手机端悬浮二维码结束 -->
+				</li> <!-- 手机端结束 -->
+			</ul>
+		</nav>
+	</header>
+	<!-- banner部分 -->
+	<div class="iot_banner">
+		<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?s=fbfc8b04d1ad44e58adb&scm=20140719.manual.15319.show_fbfc8b04d1ad44e58adb&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_2" title="盛装" target="_blank"><img src="images/盛装.jpg" class="iot_adv"/></a>
+		<div class="iot_banner_in iot_container"></div>
+		<div class="iot_banner_l"></div>
+		<div class="iot_banner_r"></div>
+		<!-- 播放按钮,添加看单开始 -->
+		<a href="#" id="iot_play" title="盛装">
+			<span></span>
+		</a>
+		<a href="#" id="iot_add" title="添加看单">
+			<span></span>
+		</a>
+		<!-- 播放按钮,添加看单结束 -->
+		<!-- 右侧导航栏开始 -->
+		<div class="iot_nav">
+			<ul class="iot_program">
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?s=fbfc8b04d1ad44e58adb&scm=20140719.manual.15319.show_fbfc8b04d1ad44e58adb&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_2" title="盛装">
+						<span>盛装</span>
+						<p>撕破脸！宋佳袁咏仪心机互斗</p>
+					</a>
+				</li>
+				<li id="contact">
+					<a href="https://v.youku.com/v_show/id_XNTIwMjAyODUxNg==.html?scm=20140719.manual.15319.video_XNTIwMjAyODUxNg%3D%3D&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_1" title="麻花特开心" >
+						<span>麻花特开心</span>
+						<p>沈腾李诞玩游戏造型惊人</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzM1Mjc3Ng==.html?scm=20140719.manual.15319.video_XNTIwMzM1Mjc3Ng%3D%3D&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_3" title="飘雪的日子来看你" >
+						<span>飘雪的日子来看你</span>
+						<p>杨迪攀冰炫技惨遭打脸</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDM1NDE0OA==.html?s=edfdec3f60cb43dc9cdc&scm=20140719.manual.15319.show_edfdec3f60cb43dc9cdc&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_4" title="不会恋爱的我们" >
+						<span>不会恋爱的我们</span>
+						<p>高甜！金晨王子异心动年下恋</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5Nzg0ODAyOA==.html?s=ebda0391d0974cafa6c0&scm=20140719.manual.15319.show_ebda0391d0974cafa6c0&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_5&s=ebda0391d0974cafa6c0" title="乡村爱情14" >
+						<span>乡村爱情14</span>
+						<p>谢广坤刘能争当东北厨师</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjE0MjUyMA==.html?scm=20140719.manual.15319.video_XNTIwMjE0MjUyMA%3D%3D&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_6" title="闪光的乐队" >
+						<span>闪光的乐队</span>
+						<p>张碧晨吉克隽逸含泪对唱</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?s=5750e5e207ba46dab836&scm=20140719.manual.15319.show_5750e5e207ba46dab836&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_7&s=5750e5e207ba46dab836" title="镜·双城" >
+						<span>镜·双城</span>
+						<p>李易峰陈钰琪云荒仙恋</p>
+					</a>
+				</li>
+				<li>
+					<a href="https://market.m.taobao.com/app/tb-source-app/shopact/pages/index?wh_weex=true&pathInfo=shop/activity&userId=2210143997358&shopId=585233196&pageId=273025360&alisite=true&_bind=true&bc_fl_src=tmall_market_llb_1_1676651&llbPlatform=pc&agentId=1512024&spm=a224e.7913437.1.1676651&llbIsd=1&bxsign=llbQFIcLO5Flj06lRU1eVAF3N7rcjPaXuPHGZ64yJj0QsDT+WsKkDqcttvuBDVN87Asxpkn+1QHbCes6YTL7qCEH9Ik5uW+IYoFKl5FpgCrEBE=&ntfMsId=f90d7ef1fbad4375b7fdf857dec93a63&&llbOsd=1&un=3fa43956284977d9397accd6b81c5e72&share_crt_v=1&un_site=0&ut_sk=1.utdid_98765432_1644375384230.TaoPassword-Outside.1122_liuliangbao&sp_tk=WFFiSTJXajUydFI=&cpp=1&shareurl=true&short_name=h.fl6Omu7&app=chrome" title="纯甄馋酸奶" >
+						<span>纯甄馋酸奶</span>
+						<p>有跳跳糖的馋酸奶好吃到跳起来</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右侧导航栏结束 -->
+		<!-- 下侧导航栏开始 -->
+		<div class="iot_nav_bottom"></div> <!-- 下侧模糊阴影部分 -->
+		<div class="iot_nav_bottom_l"> 
+			<!-- 左侧部分 -->
+			<div class="iot_TV">
+				<a href="https://tv.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.1">电视剧</a>
+				 <!-- 电视剧悬浮节目单开始 -->
+				<div class="iot_TV_menu">
+					<img src="images/sj.png" id="iot_sj">
+					<a href="https://www.youku.com/category/show/c_97.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.44" id="iot_manytv">更多电视剧 ></a>
+					<a href="https://v.youku.com/v_show/id_XNTE5Nzg0ODAyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.40&s=ebda0391d0974cafa6c0" id="iot_village" title="乡村爱情14">
+						<img src="images/village.jpg"/>
+						<p>乡村爱情14</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.51&s=fbfc8b04d1ad44e58adb" id="iot_dress" title="盛装">
+						<img src="images/dress.jpg" />
+						<p>盛装</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDM1NDE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.57&s=edfdec3f60cb43dc9cdc" id="iot_love" title="不会恋爱的我们">
+						<img src="images/love.jpg" />
+						<p>不会恋爱的我们</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.63&s=5750e5e207ba46dab836" id="iot_mirror" title="镜·双城">
+						<img src="images/mirror.jpg" />
+						<p>镜·双城</p>
+					</a>
+  				</div>	
+				 <!-- 电视剧悬浮节目单结束 -->
+			</div>
+			<div class="iot_vary">
+				<a href="https://zy.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.4" >综艺</a>
+				<!-- 综艺悬浮节目单开始 -->
+				<div class="iot_vary_menu">
+					<img src="images/sj.png" id="iot_sj">
+					<a href="https://www.youku.com/category/show/c_85.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.69" id="iot_manyvary">更多综艺 ></a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjA0MTA5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.65&s=affe15ef4cc44910b692" id="iot_happy1" title="麻花特开心">
+						<img src="images/happy1.jpg"/>
+						<p>麻花特开心</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjA0MTA5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.77&s=afffd601bb1e4bd18afa" id="iot_happy2" title="麻花局中局">
+						<img src="images/happy2.jpg" />
+						<p>麻花局中局</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk4NzYwOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.81&s=eafa2908d6884543a194" id="iot_zy" title="中央广播电视总台元宵晚会 2022">
+						<img src="images/even.jpg" />
+						<p>中央广播电视...</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjE0NzMxNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.88&s=fccf96f33f7b41f09e36" id="iot_band" title="闪光的乐队">
+						<img src="images/band.jpg" />
+						<p>闪光的乐队</p>
+					</a>
+  				</div>	
+				 <!-- 综艺悬浮节目单结束 -->
+			</div>	
+			<div class="iot_film">
+				<a href="https://movie.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.7">电影</a>
+				<!-- 电影悬浮节目单开始 -->
+				<div class="iot_film_menu">
+					<img src="images/sj.png" id="iot_sj">
+					<a href="https://www.youku.com/category/show/c_96.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.89" id="iot_manyfilm">更多电影 ></a>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk2NzYwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.95&s=bbbb05ac65fa4643b90c" id="iot_hugyou" title="穿过寒冬拥抱你">
+						<img src="images/hugyou.jpg"/>
+						<p>穿过寒冬拥抱你</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk4NTEyMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.101&s=bcafb2b58ecb4e42b04c" id="iot_provide" title="守岛人">
+						<img src="images/provide.jpg" />
+						<p>守岛人</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjY2ODUxNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.107&s=cefdc9a4ac154f898610" id="iot_lake" title="长津湖">
+						<img src="images/lake.jpg" />
+						<p>长津湖</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDM3MzYyNA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.113&s=cabd315439774c70a33f" id="iot_kill" title="误杀2">
+						<img src="images/kill.png" />
+						<p>误杀2</p>
+					</a>
+  				</div>	
+				 <!-- 电影悬浮节目单结束-->
+			</div>
+			<div class="iot_cartoon">
+				<a href="https://comic.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.10">动漫</a>
+				 <!-- 动漫悬浮节目单开始 -->
+				<div class="iot_cartoon_menu">
+					<img src="images/sj.png" id="iot_sj">
+					<a href="https://www.youku.com/category/show/c_100.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.114" id="iot_manycartoon">更多动漫 ></a>
+					<a href="https://v.youku.com/v_show/id_XNTE3ODIxMDEzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.120&s=ccdd2cdc62ec4bb1b83b" id="iot_chui" title="开心锤锤">
+						<img src="images/chui2.jpg"/>
+						<p>开心锤锤</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTE5NzYyMjEzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.126&s=bebf59b7f9174cd28478" id="iot_taste" title="小品一家人 第二季">
+						<img src="images/taste.jpg" />
+						<p>小品一家人 第...</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTQwMTgxMTE2.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_1&s=cc001f06962411de83b1&scm=20140719.apircmd.29096.show_cc001f06962411de83b1" id="iot_huoyin" title="火影忍者">
+						<img src="images/huoyin.jpg" />
+						<p>火影忍者</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTA0OTIzNDY0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.132&s=1aefbfbd100644efbfbd" id="iot_mini" title="迷你小洞 第二季">
+						<img src="images/mini.jpg" />
+						<p>迷你小洞 第二季</p>
+					</a>
+  				</div>	
+				 <!-- 动漫悬浮节目单结束 -->
+			</div>
+			<div class="iot_child">
+				<a href="https://child.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.13">少儿</a>
+				 <!-- 少儿悬浮节目单开始 -->
+				<div class="iot_child_menu">
+					<img src="images/sj.png" id="iot_sj">
+					<a href="https://child.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.13" id="iot_manychild">更多少儿内容 ></a>
+					<a href="https://v.youku.com/v_show/id_XNDMxNjY5MjY0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.135&s=deea83b06b3f42ed8255" id="iot_super" title="超级宝贝JOJO">
+						<img src="images/super.jpg"/>
+						<p>超级宝贝JOJO</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNDQ3NTE1NjA0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.141&s=dcfa557adadd4963bd00" id="iot_egg" title="开心蛋卷">
+						<img src="images/egg.jpg" />
+						<p>开心蛋卷</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XMTYzMTY5MTAzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_2&s=a79dcec626ee11e6a080&scm=20140719.apircmd.29097.show_a79dcec626ee11e6a080&s=a79dcec626ee11e6a080" id="iot_song" title="贝乐虎儿歌">
+						<img src="images/song.jpg" />
+						<p>贝乐虎儿歌</p>
+					</a>
+					<a href="https://v.youku.com/v_show/id_XNTE5NjUxNjUyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.147&s=fece197a2e8d48bfa1f9" id="iot_baby" title="宝贝赳赳 第三季">
+						<img src="images/baby.jpg" />
+						<p>宝贝赳赳 第三季</p>
+					</a>
+  				</div>	
+				 <!-- 少儿悬浮节目单结束 -->
+			</div>
+			<div class="iot_TV_bottom">
+				<a href="https://youku.com/category/show/c_97_a_%E4%B8%AD%E5%9B%BD.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.2" target="_blank">内地剧</a>
+				<a href="https://youku.com/category/show/c_97_a_%E4%B8%AD%E5%9B%BD%E9%A6%99%E6%B8%AF.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.3">港剧</a>
+			</div>
+			<div class="iot_vary_bottom">
+				<a href="https://youku.com/category/show/c_85.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.5" >正在热播</a>
+				<a href="https://youku.com/category/show/c_85_cr_1.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.6">优酷自制</a>
+			</div>
+			<div class="iot_film_bottom">
+				<a href="https://youku.com/category/show/c_96_s_5_pt_.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.8">院线大片</a>
+				<a href="https://youku.com/category/show/c_96_s_5_pt_1.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.9">免费</a>
+			</div>
+			<div class="iot_cartoon_bottom">
+				<a href="https://youku.com/category/show/c_100_a_%E4%B8%AD%E5%9B%BD.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.11">国漫</a>
+				<a href="https://youku.com/category/show/c_100_a_%E6%97%A5%E6%9C%AC.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.12">日漫</a>
+			</div>
+			<div class="iot_child_bottom">
+				<a href="https://youku.com/category/show/c_177_g_%E7%9B%8A%E6%99%BA.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.14">益智</a>
+				<a href="https://youku.com/category/show/c_177_g_%E5%84%BF%E6%AD%8C.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.15">儿歌</a>
+			</div>
+		</div>
+		<!-- 中间部分 -->
+		<div class="iot_nav_bottom_in">
+			<a href="https://jilupian.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_6">纪录片</a>
+			<a href="https://jilupian.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_6" >游戏</a>
+			<a href="https://ent.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_10">娱乐</a>
+			<a href="https://xue.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_7" id="iot_xt">学堂</a>
+			<a href="https://sports.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj1_9" id="iot_ty">体育</a>
+			<a href="#" id="iot_gd">更多</a>
+		</div>
+		<!-- 右侧部分 -->
+		<div class="iot_nav_bottom_r">
+			<div class="iot_nav_bottom_r1">
+				<a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_1" class="iot_hy">
+					<img src="images/yellow.png"/>
+					<span>VIP会员</span>
+				</a>
+			</div>
+			<div class="iot_nav_bottom_r2">	
+				<a href="https://v.laifeng.com/?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_2&&refer=youkupc001" class="iot_lf">
+					<img src="images/penguin.png"/>
+					<span>来疯直播</span>
+				</a>
+			</div>
+			<div class="iot_nav_bottom_r3">	
+				<a href="https://www.youku.com/category/show/c_97.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer3.d_zj2_3" class="iot_pk">
+					<img src="images/computer.png"/>
+					<span>优酷片库</span>
+				</a>
+			</div>
+		</div>
+		<!-- 下侧导航栏结束 -->
+	</div>
+	<!-- 正在热播部分 -->
+	<div class="iot_hot iot_container">
+		<div class="iot_hot_top iot_container">
+			<h2>正在热播</h2>
+			<a href="https://t.youku.com/yep/page/pc/yj8f3kebdy?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_subtitle_0&isNeedBaseImage=1&from=pc_general&scm=20140719.manual.7182.url_https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fpc%2Fyj8f3kebdy%3FisNeedBaseImage%3D1%26from%3Dpc_general" title="福满中华 春贺神州">福满中华 春贺神州</a>
+			<a href="https://v.youku.com/v_show/id_XNTIwNTAxMTI4MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_subtitle_1&scm=20140719.manual.7182.url_http%3A%2F%2Fv.youku.com%2Fv_show%2Fid_XNTIwNTAxMTI4MA%3D%3D.html" title="MV《永远在一起》">MV《永远在一起》</a>
+			<a href="https://t.youku.com/yep/page/pc/9fla0f7ml0?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_subtitle_2&isNeedBaseImage=1&from=pc_general&scm=20140719.manual.7182.url_https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fpc%2F9fla0f7ml0%3FisNeedBaseImage%3D1%26from%3Dpc_general" title="冬奥版权保护行动公告">冬奥版权保护行动公告</a>
+		</div>
+		<div class="iot_hot_bottom iot_container">
+			<ul>
+				<li>
+					<a href="https://t.youku.com/yep/page/pc/ozob1gijmp?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_1&isNeedBaseImage=1&from=pc_general&scm=20140719.manual.7182.url_https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fpc%2Fozob1gijmp%3FisNeedBaseImage%3D1%26from%3Dpc_general&scm=20140719.manual.7182.url_https%3A%2F%2Ft.youku.com%2Fyep%2Fpage%2Fpc%2Fozob1gijmp%3Fspm%3Da2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_2%26isNeedBaseImage%3D1%26from%3Dpc_general%26scm%3D20140719.manual.7182.url_https%253A%252F%252Ft.youku.com%252Fyep%252Fpage%252Fpc%252Fozob1gijmp%253FisNeedBaseImage%253D1%2526from%253Dpc_general" title="弘扬社会主义核心价值观">
+						<div><img src="images/china.jpg" /></div>
+						<span>弘扬社会主义核心价值</span>
+					</a>
+					<p>共筑中国梦</p>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMzk1NjM1MjAw.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_2&s=cc003400962411de83b1&scm=20140719.rcmd.7182.show_cc003400962411de83b1" 
+					title="名侦探柯南·烧脑来袭">
+						<div><img src="images/kenan.jpg" /></div>
+						<span>名侦探柯南·烧脑来袭</span>
+					</a>
+					<p>令和时代的少年福尔摩斯</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至1094话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTYzNzY2NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_3&s=abda7428c5c140b787d6&scm=20140719.rcmd.7182.show_abda7428c5c140b787d6" title="铁拳英雄👊拳拳到肉">
+						<div><img src="images/hero.jpg"/></div>
+						<span>铁拳英雄👊拳拳到肉</span>
+					</a>
+					<p>热血青年用拳脚守护家园</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至23集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjI5NDk4OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_4&s=fcae06d654bd4a15b269&scm=20140719.rcmd.7182.show_fcae06d654bd4a15b269" title="真武巅峰☄️脱胎强者">
+						<div><img src="images/strong.png" /></div>
+						<span>真武巅峰☄️脱胎强者</span>
+					</a>
+					<p>超凡打斗！惊艳出招</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至18话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc3Mzk0MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_5&s=ffcaf0b8071544c38e8b&scm=20140719.rcmd.7182.show_ffcaf0b8071544c38e8b&s=ffcaf0b8071544c38e8b" title="小酒窝🤣看到就想笑">
+						<div><img src="images/laugh.jpg" /></div>
+						<span>小酒窝🤣看到就想笑</span>
+					</a>
+					<p>名场面！潘长江套娃式叫代驾</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至20集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMjY4NjM5Mzc0MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_6&s=311801efbfbd111211ef&scm=20140719.rcmd.7182.show_311801efbfbd111211ef" title="博人传💥火影新时代">
+						<div><img src="images/times.jpg"/></div>
+						<span>博人传💥火影新时代</span>
+					</a>
+					<p>传说的猫妖忍术~~</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至227话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDQ1MjI5Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer5.d_zj1_7&scm=20140719.rcmd.7182.video_XNTIwNDQ1MjI5Ng%3D%3D" title="观复嘟嘟❤️三生虐恋">
+						<div><img src="images/dudu.jpg" /></div>
+						<span>观复嘟嘟❤️三生虐恋</span>
+					</a>
+					<p>南唐小朝廷里的情爱纠葛</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至4集</b>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 猜你在追部分 -->
+	<div class="iot_guess iot_container">
+		<div class="iot_guess_top iot_container">
+			<h2>猜你在追</h2>
+		</div>
+		<div class="iot_guess_bottom iot_container">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk2NzYwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_1&s=bbbb05ac65fa4643b90c&scm=20140719.rcmd.27501.show_bbbb05ac65fa4643b90c" title="穿过寒冬拥抱你">
+						<div><img src="images/hug.jpg"/></div>
+						<span>穿过寒冬拥抱你</span>
+					</a>
+					<p>为你推荐</p>
+					<i class="iot_label_sb">首播</i>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE2MjA2OTI1Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_2&s=efbfbd2a48eaa89711ef&scm=20140719.rcmd.27501.show_efbfbd2a48eaa89711ef&s=efbfbd2a48eaa89711ef"  title="黄皮子坟">
+						<div><img src="images/grave.jpg"/></div>
+						<span>黄皮子坟</span>
+					</a>
+					<p>知青遭遇人熊袭击</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>6.7</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNDkyOTIwNDk0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_3&s=e0bde9d965c247f5a6eb&scm=20140719.rcmd.27501.show_e0bde9d965c247f5a6eb"  title="姜子牙">
+						<div><img src="images/teeth.jpg"/></div>
+						<span>姜子牙</span>
+					</a>
+					<p>太公归来一战封神</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>7.9</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNDY4MDQwMjY0MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_4&s=dfee54c74cc240e7ba04&scm=20140719.rcmd.27501.show_dfee54c74cc240e7ba04&s=dfee54c74cc240e7ba04" title="琉璃">
+						<div><img src="images/liuli.jpg" /></div>
+						<span>琉璃</span>
+					</a>
+					<p>初遇夫妇十世痴恋</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>59集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTA5ODY4OTQwOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_5&s=df623efa41044a0c8443&scm=20140719.rcmd.27501.show_df623efa41044a0c8443" title="发财日记">
+						<div><img src="images/diary.jpg"  /></div>
+						<span>发财日记</span>
+					</a>
+					<p>穷小子南下淘金</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>8.9</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNDcxMTk4MDc0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_6&s=19efbfbd7eefbfbd7eef&scm=20140719.rcmd.27501.show_19efbfbd7eefbfbd7eef" title="陆行鲨">
+						<div><img src="images/land.jpg"/></div>
+						<span>陆行鲨</span>
+					</a>
+					<p>变异鲨鱼追杀人类</p>
+					<i class="iot_label_db">独播</i>
+					<b>6.4</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNDc0NTQxMjI5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.homepage_vipyindao.d_zj2_8&s=eebab104363643c3993a&scm=20140719.rcmd.27501.show_eebab104363643c3993a&s=eebab104363643c3993a" title="将军家的小娘子">
+						<div><img src="images/wife.jpg"  /></div>
+						<span>将军家的小娘子</span>
+					</a>
+					<p>一见钟情超甜相恋</p>
+					<i class="iot_label_db">独播</i>
+					<b>30集全</b>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 电视剧大模块部分 -->
+	<div class="iot_drama iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_drama_top iot_container">
+			<a href="https://tv.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.app.5~5!2~5!6~5~5~5~5~5~H2~5~A&scm=20140719.manual.29095.url_http%3A%2F%2Ftv.youku.com" title="电视剧"><h2>电视剧</h2></a>
+			<span id="iot_new">最新</span>
+			<span>内地剧</span>
+			<span>港台剧</span>
+			<span>日韩剧</span>
+			<span>英美剧</span>
+			<span>亚太剧</span>
+			<h3>电视剧热播榜</h3>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 左侧部分开始 -->
+		<div class="iot_drama_l">
+			<a href="https://v.youku.com/v_show/id_XNTE5Nzg0ODAyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_1&s=ebda0391d0974cafa6c0&scm=20140719.manual.29095.show_ebda0391d0974cafa6c0" title="乡爱14😁亲家联手">
+				<img src="images/14.gif" />
+				<span>乡爱14😁亲家联手</span>
+			</a>
+			<p>赢谢广坤！赵四给刘能出损招</p>
+			<i class="iot_label_db">独播</i>
+			<b>更新至30集</b>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 中间部分开始 -->
+		<div class="iot_drama_in">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_2&s=fbfc8b04d1ad44e58adb&scm=20140719.manual.29095.show_fbfc8b04d1ad44e58adb" title="盛装💅全是腹黑心机">
+						<div><img src="images/sz.jpg" /></div>
+						<span>盛装💅全是腹黑心机</span>
+					</a>
+					<p>撕破脸！宋佳袁咏仪心机互斗</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至15集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDM1NDE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_4&s=edfdec3f60cb43dc9cdc&scm=20140719.manual.29095.show_edfdec3f60cb43dc9cdc&s=edfdec3f60cb43dc9cdc" title="不会恋爱💘疯狂心动">
+						<div><img src="images/heart.jpg" /></div>
+						<span>不会恋爱💘疯狂心动</span>
+					</a>
+					<p>女霸总金晨恋上狼狗王子异</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至10集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTA1ODcyMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_6&s=fbea5780b9bb4104a371&scm=20140719.manual.29095.show_fbea5780b9bb4104a371" title="琉璃瓦☀️甜宠开播">
+						<div><img src="images/glass.jpg" /></div>
+						<span>琉璃瓦☀️甜宠开播</span>
+					</a>
+					<p>甜妹陈钰琪爱上冷脸学霸林一</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至24集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5Nzg2MDU0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_3&s=cbfd8ee4962411de83b1&scm=20140719.manual.29095.show_cbfd8ee4962411de83b1&s=cbfd8ee4962411de83b1" title="老友记👍必看经典">
+						<div><img src="images/friend.jpg" /></div>
+						<span>老友记👍必看经典</span>
+					</a>
+					<p>高清修复！9.7分神作回归</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>24集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5ODA5OTI3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_5&s=1826efbfbdefbfbdefbf&scm=20140719.manual.29095.show_1826efbfbdefbfbdefbf&s=1826efbfbdefbfbdefbf" title="天王💕甜恋不停">
+						<div><img src="images/stop.jpg" /></div>
+						<span>天王💕甜恋不停</span>
+					</a>
+					<p>废柴男艺人爱上呆萌少女</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至6集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_7&s=5750e5e207ba46dab836&scm=20140719.manual.29095.show_5750e5e207ba46dab836" title="镜·双城❤️宿命纠缠">
+						<div><img src="images/date.jpg" /></div>
+						<span>镜·双城❤️宿命纠缠</span>
+					</a>
+					<p>李易峰陈钰琪开启云荒仙恋</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至40集</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 右边部分开始 -->
+		<div class="iot_drama_r">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5Nzg0ODAyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj8_1&s=ebda0391d0974cafa6c0&scm=20140719.apircmd.29095.show_ebda0391d0974cafa6c0">
+						<i> 
+							<img src="images/village.jpg" />
+							<em>1</em>
+							<b>NO</b>
+						</i>
+						<span>乡村爱情14</span>
+						<p>刘能回归喜迎虎年</p>
+						<strong>
+							<u>9762</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj8_2&s=fbfc8b04d1ad44e58adb&scm=20140719.apircmd.29095.show_fbfc8b04d1ad44e58adb">
+						<i> 
+							<img src="images/dress.jpg" />
+							<em>2</em>
+							<b>NO</b>
+						</i>
+						<span>盛装</span>
+						<p>职场风云御姐互撕</p>
+						<strong>
+							<u>9584</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDM1NDE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj8_3&s=edfdec3f60cb43dc9cdc&scm=20140719.apircmd.29095.show_edfdec3f60cb43dc9cdc">
+						<i> 
+							<img src="images/love.jpg" />
+							<em>3</em>
+							<b>NO</b>
+						</i>
+						<span>不会恋爱的我们</span>
+						<p>金晨王子异年下恋</p>
+						<strong>
+							<u>9430</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzU3MzY3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj8_4&s=bbdc201e032c409fbb25&scm=20140719.apircmd.29095.show_bbdc201e032c409fbb25">
+						<i> 
+							<img src="images/today.jpg" />
+							<em>4</em>
+						</i>
+						<span>今生有你</span>
+						<p>钟汉良再搭李小冉</p>
+						<strong>
+							<u>9274</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj8_5&s=5750e5e207ba46dab836&scm=20140719.apircmd.29095.show_5750e5e207ba46dab836&s=5750e5e207ba46dab836">
+						<i> 
+							<img src="images/mirror.jpg" />
+							<em>5</em>
+						</i>
+						<span>镜·双城</span>
+						<p>李易峰绝美仙恋</p>
+						<strong>
+							<u>9186</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边部分结束 -->
+	</div>
+	<!-- 广告1部分 -->
+	<a href="https://v.youku.com/v_show/id_XNTIwMTA1ODcyMA==.html?s=fbea5780b9bb4104a371&scm=20140719.manual.15319.show_fbea5780b9bb4104a371&spm=a2ha1.14919748_WEBHOME_GRAY.drawer2.d_zj1_8&s=fbea5780b9bb4104a371" class="iot_poster1 iot_container ">
+		<span>广告</span>
+	</a>
+	<!-- 综艺部分 -->
+	<div class="iot_show iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_show_top iot_container">
+			<a href="https://zy.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.app.5~5!2~5!8~5~5~5~5~5~H2~5~A&scm=20140719.manual.29071.url_http%3A%2F%2Fzy.youku.com" title="综艺"><h2>综艺</h2></a>
+			<span id="iot_new_show">最新综艺</span>
+			<span>喜剧大咖</span>
+			<span>竞技选秀</span>
+			<span>情感生活</span>
+			<h3>综艺热播榜</h3>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 左侧部分开始 -->
+		<div class="iot_show_l ">
+			<a href="https://v.youku.com/v_show/id_XNTIwMjAyODUxNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_1&scm=20140719.manual.29071.video_XNTIwMjAyODUxNg%3D%3D" title="麻花👍还是你劲儿大">
+				<img src="images/mahua.gif" />
+				<span>麻花👍还是你劲儿大</span>
+			</a>
+			<p>沈腾游戏耍赖遭马丽锁喉</p>
+			<i class="iot_label_sb">首播</i>
+			<b>02-13期</b>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 中间部分开始 -->
+		<div class="iot_show_in">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc1NjE0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer7.d_zj1_2&s=fbfc8b04d1ad44e58adb&scm=20140719.manual.29095.show_fbfc8b04d1ad44e58adb" title="追光吧💥年度总决赛">
+						<div><img src="images/compete.jpg" /></div>
+						<span>追光吧💥年度总决赛</span>
+					</a>
+					<p>爷青回紫兰仙子为孙悟空加油</p>
+					<b>02-05期</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzM1Mjc3Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_4&scm=20140719.manual.29071.video_XNTIwMzM1Mjc3Ng%3D%3D" title="飘雪🤣杠精上线">
+						<div><img src="images/snow.jpg" /></div>
+						<span>飘雪🤣杠精上线</span>
+					</a>
+					<p>杨迪刘维PK攀冰笑拉了</p>
+					<i class="iot_label_db">独播</i>
+					<b>02-12期</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjE0MjUyMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_6&scm=20140719.manual.29071.video_XNTIwMjE0MjUyMA%3D%3D" title="闪光😍惊喜十足">
+						<div><img src="images/light.jpg" /></div>
+						<span>闪光😍惊喜十足</span>
+					</a>
+					<p>张碧晨吉克隽逸含泪合唱</p>
+					<i class="iot_label_sb">首播</i>
+					<b>02-12期</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDA4NjY5Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_3&scm=20140719.manual.29071.video_XNTIwNDA4NjY5Ng%3D%3D" title="新民乐💘民乐版米店">
+						<div><img src="images/music.jpg" /></div>
+						<span>新民乐💘民乐版米店</span>
+					</a>
+					<p>前奏一响开始高能颤栗</p>
+					<i class="iot_label_db">独播</i>
+					<b>01-25期</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5OTczMDA1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_5&s=aebddaa6217349248278&scm=20140719.manual.29071.show_aebddaa6217349248278" title="青环3🤣展昭暴走">
+						<div><img src="images/teen.gif" /></div>
+						<span>青环3🤣展昭暴走</span>
+					</a>
+					<p>杨洋惨遭调侃“暴打”杨迪</p>
+					<b>12期全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDQ3NTgyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj1_7&scm=20140719.manual.29071.video_XNTIwMDQ3NTgyOA%3D%3D" title="中国潮音😲决战开启">
+						<div><img src="images/fight.jpg" /></div>
+						<span>中国潮音😲决战开启</span>
+					</a>
+					<p>拼了！薛之谦张靓颖助唱决斗</p>
+					<i class="iot_label_db">独播</i>
+					<b>01-14期</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 右边部分开始 -->
+		<div class="iot_show_r">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjA0MTA5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj5_1&s=affe15ef4cc44910b692&scm=20140719.apircmd.29071.show_affe15ef4cc44910b692">
+						<i> 
+							<img src="images/happy.jpg" />
+							<em>1</em>
+							<b>NO</b>
+						</i>
+						<span>麻花特开心</span>
+						<p>沈腾马丽爆笑来袭</p>
+						<strong>
+							<u>9108</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjE0NzMxNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj5_2&s=fccf96f33f7b41f09e36&scm=20140719.apircmd.29071.show_fccf96f33f7b41f09e36">
+						<i> 
+							<img src="images/band.jpg" />
+							<em>2</em>
+							<b>NO</b>
+						</i>
+						<span>闪光的乐队</span>
+						<p>突破经典一起闪光</p>
+						<strong>
+							<u>6473</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTEzMTc4ODIyNA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj5_3&s=aefa99985ae94504ab68&scm=20140719.apircmd.29071.show_aefa99985ae94504ab68">
+						<i> 
+							<img src="images/laoguo.jpg" />
+							<em>3</em>
+							<b>NO</b>
+						</i>
+						<span>老郭有新番 第一季</span>
+						<p>郭德纲潮派说书</p>
+						<strong>
+							<u>6066</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDc2MzMwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj5_4&s=ceeac7b3508c4a148c42&scm=20140719.apircmd.29071.show_ceeac7b3508c4a148c42">
+						<i> 
+							<img src="images/east.jpg" />
+							<em>4</em>
+						</i>
+						<span>东方卫视欢乐喜剧人老友季</span>
+						<p>喜剧人欢乐重聚</p>
+						<strong>
+							<u>5645</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDM5MTI4NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer9.d_zj5_5&s=bfeb9b64365f4cee85da&scm=20140719.apircmd.29071.show_bfeb9b64365f4cee85da&s=bfeb9b64365f4cee85da">
+						<i> 
+							<img src="images/deyun.jpg" />
+							<em>5</em>
+						</i>
+						<span>德云社德云一队小园子天津站第二场 2021</span>
+						<p>老郭新诠释扒马褂</p>
+						<strong>
+							<u>5254</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边部分结束 -->
+	</div>
+	<!-- 电影部分 -->
+	<div class="iot_mv iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_mv_top iot_container">
+			<a href="https://movie.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.app.5~5!2~5!10~5~5~5~5~5~H2~5~A&scm=20140719.manual.29075.url_http%3A%2F%2Fmovie.youku.com" title="电影"><h2>电影</h2></a>
+			<span id="iot_mv_hot">热播</span>
+			<span>免费</span>
+			<span>好莱坞</span>
+			<span>网络电影</span>
+			<h3>电影热播榜</h3>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 左侧部分开始 -->
+		<div class="iot_mv_l">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk2NzYwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_1&s=bbbb05ac65fa4643b90c&scm=20140719.manual.29075.show_bbbb05ac65fa4643b90c" title="穿过寒冬拥抱你">
+						<div><img src="images/winter.gif" /></div>
+						<span>穿过寒冬拥抱你</span>
+					</a>
+					<p>贾玲为爱伤心痛哭</p>
+					<i class="iot_label_sb">首播</i>
+					<b>6.9</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNTAwMjIwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_3&s=adef9814251947398cf8&scm=20140719.manual.29075.show_adef9814251947398cf8&s=adef9814251947398cf8" title="《不要忘记我爱你》优酷独家幕后记录">
+						<div><img src="images/forget.jpg" /></div>
+						<span>《不要忘记我爱你》优酷...</span>
+					</a>
+					<p>娜扎刘以豪片场记</p>
+					<i class="iot_label_db">独播</i>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDM3MzYyNA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_5&s=cabd315439774c70a33f&scm=20140719.manual.29075.show_cabd315439774c70a33f&s=cabd315439774c70a33f" title="误杀2🔥">
+						<div><img src="images/kill.png" /></div>
+						<span>误杀2🔥</span>
+					</a>
+					<p>肖央为爱绝望反击</p>
+					<i class="iot_label_VIPbj">VIP·半价</i>
+					<b>8.2</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzgzODY2OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_7&s=abde93df09e44042aba4&scm=20140719.manual.29075.show_abde93df09e44042aba4" title="李茂扮太子">
+						<div><img src="images/taizi.jpg" /></div>
+						<span>李茂扮太子</span>
+					</a>
+					<p>马丽常远爆笑夫妻</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>6.8</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTkwODE5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_9&s=caed74850fb8481bb8be&scm=20140719.rcmd.29075.show_caed74850fb8481bb8be&s=caed74850fb8481bb8be" title="长夜危机">
+						<div><img src="images/long.jpg" /></div>
+						<span>长夜危机</span>
+					</a>
+					<p>医生对决冷血罪犯</p>
+					<i class="iot_label_VIP">VIP</i>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk4NTEyMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_2&s=bcafb2b58ecb4e42b04c&scm=20140719.manual.29075.show_bcafb2b58ecb4e42b04c&s=bcafb2b58ecb4e42b04c" title="守岛人">
+						<div><img src="images/provide.jpg" /></div>
+						<span>守岛人</span>
+					</a>
+					<p>刘烨坚守海防前哨</p>
+					<i class="iot_label_sb">首播</i>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDU3NjU2NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_4&s=570c68efbfbd0cefbfbd&scm=20140719.manual.29075.show_570c68efbfbd0cefbfbd" title="九幽寻宝录">
+						<div><img src="images/find.png" /></div>
+						<span>九幽寻宝录</span>
+					</a>
+					<p>古墓探寻稀世珍宝</p>
+					<i class="iot_label_db">独播</i>
+					<b>6.7</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDI2OTk5Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_6&s=ebaf4beb18a346bf981c&scm=20140719.manual.29075.show_ebaf4beb18a346bf981c&s=ebaf4beb18a346bf981c" title="雄狮少年">
+						<div><img src="images/line.png" /></div>
+						<span>雄狮少年</span>
+					</a>
+					<p>热血逆袭会员免费</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>9.2</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDI4OTU3Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_8&s=535d08e4e3cd445c9d6b&scm=20140719.rcmd.29075.show_535d08e4e3cd445c9d6b" title="曾经相爱的我们">
+						<div><img src="images/we.jpg" /></div>
+						<span>曾经相爱的我们</span>
+					</a>
+					<p>陈柏霖追爱郭采洁</p>
+					<i class="iot_label_sb">首播</i>
+					<b>6.8</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDMyMzYwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj1_10&s=fbce997a86bc402c9654&scm=20140719.rcmd.29075.show_fbce997a86bc402c9654" title="新倚天·下">
+						<div><img src="images/newb.jpg" /></div>
+						<span>新倚天·下</span>
+					</a>
+					<p>林峯单挑武林群雄</p>
+					<i class="iot_label_VIPbj">VIP·半价</i>
+					<b>7.2</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 右边部分开始 -->
+		<div class="iot_mv_r">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDk2NzYwMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_1&s=bbbb05ac65fa4643b90c&scm=20140719.apircmd.29075.show_bbbb05ac65fa4643b90c&s=bbbb05ac65fa4643b90c">
+						<i> 
+							<img src="images/hugyou.jpg" />
+							<em>1</em>
+							<b>NO</b>
+						</i>
+						<span>穿过寒冬拥抱你</span>
+						<p>武汉封城市民群像</p>
+						<strong>
+							<u>8109</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDI2OTk5Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_2&s=ebaf4beb18a346bf981c&scm=20140719.apircmd.29075.show_ebaf4beb18a346bf981c&s=ebaf4beb18a346bf981c">
+						<i> 
+							<img src="images/line.png" />
+							<em>2</em>
+							<b>NO</b>
+						</i>
+						<span>雄狮少年</span>
+						<p>雄狮少年勇敢追梦</p>
+						<strong>
+							<u>7124</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDM3MzYyNA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_3&s=cabd315439774c70a33f&scm=20140719.apircmd.29075.show_cabd315439774c70a33f">
+						<i> 
+							<img src="images/kill.png" />
+							<em>3</em>
+							<b>NO</b>
+						</i>
+						<span>误杀2</span>
+						<p>肖央为爱绝望反击</p>
+						<strong>
+							<u>6716</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDA2NTMzMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_4&s=daedf9894ea6480aa660&scm=20140719.apircmd.29075.show_daedf9894ea6480aa660">
+						<i> 
+							<img src="images/snake.jpg" />
+							<em>4</em>
+						</i>
+						<span>大蛇3龙蛇之战</span>
+						<p>探险小队智斗巨兽</p>
+						<strong>
+							<u>6234</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDU3NjU2NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_5&s=570c68efbfbd0cefbfbd&scm=20140719.apircmd.29075.show_570c68efbfbd0cefbfbd&s=570c68efbfbd0cefbfbd">
+						<i> 
+							<img src="images/find.png" />
+							<em>5</em>
+						</i>
+						<span>九幽寻宝录</span>
+						<p>江湖人士古墓寻宝</p>
+						<strong>
+							<u>6123</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjY2ODUxNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_6&s=cefdc9a4ac154f898610&scm=20140719.apircmd.29075.show_cefdc9a4ac154f898610">
+						<i> 
+							<img src="images/lake.jpg" />
+							<em>6</em>
+						</i>
+						<span>长津湖</span>
+						<p>抗美援朝经典之战</p>
+						<strong>
+							<u>5614</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzgzODY2OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_7&s=abde93df09e44042aba4&scm=20140719.apircmd.29075.show_abde93df09e44042aba4">
+						<i> 
+							<img src="images/taizi.jpg" />
+							<em>7</em>
+						</i>
+						<span>李茂扮太子</span>
+						<p>马丽常远爆笑夫妻</p>
+						<strong>
+							<u>5566</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzM2NDg5Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_8&s=3aae5587b2124d858fa5&scm=20140719.apircmd.29075.show_3aae5587b2124d858fa5">
+						<i> 
+							<img src="images/007.jpg" />
+							<em>8</em>
+						</i>
+						<span>007：无暇赴死</span>
+						<p>特工邦德搏命反击</p>
+						<strong>
+							<u>5561</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwNDMyMzU2NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_9&s=dfbc7d01752840098bbb&scm=20140719.apircmd.29075.show_dfbc7d01752840098bbb&s=dfbc7d01752840098bbb">
+						<i> 
+							<img src="images/dragon.jpg" />
+							<em>9</em>
+						</i>
+						<span>倚天屠龙记之九阳神功</span>
+						<p>导演王晶再绎经典</p>
+						<strong>
+							<u>5440</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzk4MDA4OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer11.d_zj5_10&s=fcae52a568e54cb9800b&scm=20140719.apircmd.29075.show_fcae52a568e54cb9800b">
+						<i> 
+							<img src="images/myth.jpg" />
+							<em>10</em>
+						</i>
+						<span>爱情神话</span>
+						<p>徐峥马伊琍烟火恋</p>
+						<strong>
+							<u>5427</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边部分结束 -->
+	</div>
+	<!-- 广告2部分 -->
+	<a href="https://v.youku.com/v_show/id_XNTIwMzQ5MDQ5Ng==.html" class="iot_poster2 iot_container">
+		<span>广告</span>
+	</a>
+	<!-- 会员部分 -->
+	<div class="iot_member iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_member_top iot_container">
+			<a href="https://home.vip.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.app.5~5!2~5!12~5~5~5~5~H2~5~A&scm=20140719.manual.2562.url_https%3A%2F%2Fhome.vip.youku.com%2F" title="会员"><h2>会员</h2></a>
+			<span id="iot_new_member">最新</span>
+			<span>院线大片</span>
+			<span>独播强档</span>
+			<span>热门纪实</span>
+			<span>BBC经典</span>
+			<span>更多 ></span>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 底部分开始 -->
+		<div class="iot_member_bottom iot_container">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjEzMTQ1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_1&s=aced57b4be314ac98f17&scm=20140719.apircmd.2562.show_aced57b4be314ac98f17" title="家族荣耀">
+						<div><img src="images/family.jpg" /></div>
+						<span>家族荣耀</span>
+					</a>
+					<p>豪门复仇伦理爽剧</p>
+					<i class="iot_label_db">独播</i>
+					<b>30集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTU0MzI1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_2&s=ccedb1027a8a4008b250&scm=20140719.apircmd.2562.show_ccedb1027a8a4008b250" title="小敏家 TV版">
+						<div><img src="images/little.jpg" /></div>
+						<span>小敏家 TV版</span>
+					</a>
+					<p>周迅黄磊中年爱情</p>
+					<i class="iot_label_db">独播</i>
+					<b>45集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTg3MDAxMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_3&s=7833aef0070e4f08b397&scm=20140719.apircmd.2562.show_7833aef0070e4f08b397" title="三生有幸遇上你">
+						<div><img src="images/life.jpg" /></div>
+						<span>三生有幸遇上你</span>
+					</a>
+					<p>霸总爱上美女保镖</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>40集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzUxODY3Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_4&s=f6ff4f356cd2487b833c&scm=20140719.apircmd.2562.show_f6ff4f356cd2487b833c" title="古董局中局">
+						<div><img src="images/lei.jpg" /></div>
+						<span>古董局中局</span>
+					</a>
+					<p>雷佳音李现破迷局</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>7.9</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDczNzc0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_5&s=dbbb95b10e9b43af97ee&scm=20140719.apircmd.2562.show_dbbb95b10e9b43af97ee&s=dbbb95b10e9b43af97ee" title="飞虎之壮志英雄">
+						<div><img src="images/fly.jpg" /></div>
+						<span>飞虎之壮志英雄</span>
+					</a>
+					<p>飞虎天团热血回归</p>
+					<i class="iot_label_db">独播</i>
+					<b>30集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_6&s=5750e5e207ba46dab836&scm=20140719.apircmd.2562.show_5750e5e207ba46dab836" title="镜·双城">
+						<div><img src="images/mirror.jpg" /></div>
+						<span>镜·双城</span>
+					</a>
+					<p>李易峰绝美仙恋</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至40集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjM4NDc2OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_7&s=cdfc9e098dc742018a6d&scm=20140719.apircmd.2562.show_cdfc9e098dc742018a6d" title="致命主妇">
+						<div><img src="images/major.jpg" /></div>
+						<span>致命主妇</span>
+					</a>
+					<p>主妇手撕凤凰男</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>24集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjEzMTQ1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_1&s=aced57b4be314ac98f17&scm=20140719.apircmd.2562.show_aced57b4be314ac98f17" title="家族荣耀">
+						<div><img src="images/family.jpg" /></div>
+						<span>家族荣耀</span>
+					</a>
+					<p>豪门复仇伦理爽剧</p>
+					<i class="iot_label_db">独播</i>
+					<b>30集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTU0MzI1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_2&s=ccedb1027a8a4008b250&scm=20140719.apircmd.2562.show_ccedb1027a8a4008b250" title="小敏家 TV版">
+						<div><img src="images/little.jpg" /></div>
+						<span>小敏家 TV版</span>
+					</a>
+					<p>周迅黄磊中年爱情</p>
+					<i class="iot_label_db">独播</i>
+					<b>45集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTg3MDAxMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_3&s=7833aef0070e4f08b397&scm=20140719.apircmd.2562.show_7833aef0070e4f08b397" title="三生有幸遇上你">
+						<div><img src="images/life.jpg" /></div>
+						<span>三生有幸遇上你</span>
+					</a>
+					<p>霸总爱上美女保镖</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>40集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzUxODY3Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_4&s=f6ff4f356cd2487b833c&scm=20140719.apircmd.2562.show_f6ff4f356cd2487b833c" title="古董局中局">
+						<div><img src="images/lei.jpg" /></div>
+						<span>古董局中局</span>
+					</a>
+					<p>雷佳音李现破迷局</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>7.9</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMDczNzc0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_5&s=dbbb95b10e9b43af97ee&scm=20140719.apircmd.2562.show_dbbb95b10e9b43af97ee&s=dbbb95b10e9b43af97ee" title="飞虎之壮志英雄">
+						<div><img src="images/fly.jpg" /></div>
+						<span>飞虎之壮志英雄</span>
+					</a>
+					<p>飞虎天团热血回归</p>
+					<i class="iot_label_db">独播</i>
+					<b>30集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzQxOTg3Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_6&s=5750e5e207ba46dab836&scm=20140719.apircmd.2562.show_5750e5e207ba46dab836" title="镜·双城">
+						<div><img src="images/mirror.jpg" /></div>
+						<span>镜·双城</span>
+					</a>
+					<p>李易峰绝美仙恋</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至40集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjM4NDc2OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer13.d_zj1_7&s=cdfc9e098dc742018a6d&scm=20140719.apircmd.2562.show_cdfc9e098dc742018a6d" title="致命主妇">
+						<div><img src="images/major.jpg" /></div>
+						<span>致命主妇</span>
+					</a>
+					<p>主妇手撕凤凰男</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>24集全</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 底部分结束 -->
+	</div>
+	<!-- 动漫部分 -->
+	<div class="iot_comic iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_comic_top iot_container">
+			<a href="https://comic.youku.com/?spm=a2ha1.14919748_WEBHOME_GRAY.app.5~5!2~5!13~5~5~5~5~5~H2~5~A&scm=20140719.manual.29096.url_http%3A%2F%2Fcomic.youku.com" title="动漫"><h2>动漫</h2></a>
+			<span id="iot_comic_hot">热播动画</span>
+			<span>日漫推荐</span>
+			<span>国漫推荐</span>
+			<span>独家动漫</span>
+			<span>动漫少年</span>
+			<h3>动漫热播榜</h3>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 左侧部分开始 -->
+		<div class="iot_comic_l">
+			<a href="https://v.youku.com/v_show/id_XNTQwMTgxMTE2.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_1&s=cc001f06962411de83b1&scm=20140719.apircmd.29096.show_cc001f06962411de83b1" title="火影忍者">
+				<img src="images/huoyin.jpg" />
+				<span>火影忍者</span>
+			</a>
+			<p>孤独少年忍者世界英雄梦</p>
+			<i class="iot_label_db">独播</i>
+			<b>720话全</b>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 中间部分开始 -->
+		<div class="iot_comic_in">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMzk1NjM1MjAw.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_2&s=cc003400962411de83b1&scm=20140719.apircmd.29096.show_cc003400962411de83b1" title="名侦探柯南">
+						<div><img src="images/kenan2.jpg" /></div>
+						<span>名侦探柯南</span>
+					</a>
+					<p>万年小学生的推理生涯</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>更新至1094话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE3ODIxMDEzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_4&s=ccdd2cdc62ec4bb1b83b&scm=20140719.apircmd.29096.show_ccdd2cdc62ec4bb1b83b" title="开心锤锤">
+						<div><img src="images/chui.jpg" /></div>
+						<span>开心锤锤</span>
+					</a>
+					<p>锤锤啼笑皆非的生活日常</p>
+					<b>更新至403话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMzYyMzc1NzczNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_6&s=b19c96b5d15c4db6b5cf&scm=20140719.apircmd.29096.show_b19c96b5d15c4db6b5cf" title="奥特曼全集">
+						<div><img src="images/ao.jpg" /></div>
+						<span>奥特曼全集</span>
+					</a>
+					<p>咸蛋超人经典大合辑</p>
+					<i class="iot_label_VIP">VIP</i>
+					<b>236话全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTQxMDMyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_3&s=dbbf54bdee9c4c5bbbd7&scm=20140719.apircmd.29096.show_dbbf54bdee9c4c5bbbd7" title="冰火魔厨">
+						<div><img src="images/bin.jpg" /></div>
+						<span>冰火魔厨</span>
+					</a>
+					<p>魔厨历练成为顶级魔法师</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至11话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTA0NDE1Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_5&s=cfca92c088b54a948909&scm=20140719.apircmd.29096.show_cfca92c088b54a948909" title="新秦时明月">
+						<div><img src="images/moon.jpg" /></div>
+						<span>新秦时明月</span>
+					</a>
+					<p>一剑启乱世墨道守天明</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至13话</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTE2MTQ5Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj1_7&s=eacdafb09f604595bcb6&scm=20140719.apircmd.29096.show_eacdafb09f604595bcb6" title="剑域风云">
+						<div><img src="images/world.jpg" /></div>
+						<span>剑域风云</span>
+					</a>
+					<p>卧薪尝胆后雄起争霸于世</p>
+					<i class="iot_label_db">独播</i>
+					<b>更新至26话</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 右边部分开始 -->
+		<div class="iot_comic_r">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE3ODIxMDEzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj6_1&s=ccdd2cdc62ec4bb1b83b&scm=20140719.apircmd.29096.show_ccdd2cdc62ec4bb1b83b">
+						<i> 
+							<img src="images/chui2.jpg" />
+							<em>1</em>
+							<b>NO</b>
+						</i>
+						<span>开心锤锤</span>
+						<p>锤锤诙谐生活日常</p>
+						<strong>
+							<u>9462</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTA0OTIzNDY0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj6_2&s=1aefbfbd100644efbfbd&scm=20140719.apircmd.29096.show_1aefbfbd100644efbfbd&s=1aefbfbd100644efbfbd">
+						<i> 
+							<img src="images/mini.jpg" />
+							<em>2</em>
+							<b>NO</b>
+						</i>
+						<span>迷你小洞 第二季</span>
+						<p>迷你世界搞笑故事</p>
+						<strong>
+							<u>8070</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTA5OTc0OTIxMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj6_3&s=efbfbd231f3c660d11ef&scm=20140719.apircmd.29096.show_efbfbd231f3c660d11ef">
+						<i> 
+							<img src="images/pig.jpg" />
+							<em>3</em>
+							<b>NO</b>
+						</i>
+						<span>猪屁登 第二季</span>
+						<p>传递正能量小故事</p>
+						<strong>
+							<u>7982</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE4ODYwNTE1Mg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj6_4&s=effb9736642644628b95&scm=20140719.apircmd.29096.show_effb9736642644628b95">
+						<i> 
+							<img src="images/creat.jpg" />
+							<em>4</em>
+						</i>
+						<span>迷你小洞玩创造</span>
+						<p>冒险闯关新笑料</p>
+						<strong>
+							<u>7859</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMzk1NjM1MjAw.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer14.d_zj6_5&s=cc003400962411de83b1&scm=20140719.apircmd.29096.show_cc003400962411de83b1&s=cc003400962411de83b1">
+						<i> 
+							<img src="images/kenan3.jpg" />
+							<em>5</em>
+						</i>
+						<span>名侦探柯南</span>
+						<p>天才少年推理秀</p>
+						<strong>
+							<u>7637</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边部分结束 -->
+	</div>
+	<!-- 少儿部分 -->
+	<div class="iot_children iot_container">
+		<!-- 头部分开始 -->
+		<div class="iot_children_top iot_container">
+			<a href="https://v.youku.com/v_show/id_XNTA0NTM3NTA0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_1&s=adab41de95c94a11b939&scm=20140719.manual.29097.show_adab41de95c94a11b939&s=adab41de95c94a11b939" title="少儿"><h2>少儿</h2></a>
+			<span id="iot_children_new">最新上线</span>
+			<span>热播动画</span>
+			<span>益智玩具</span>
+			<span>女生爱看</span>
+			<h3>少儿热播榜</h3>
+		</div>
+		<!-- 头部分结束 -->
+		<!-- 左侧部分开始 -->
+		<div class="iot_children_l ">
+			<a href="https://v.youku.com/v_show/id_XNTA0NTM3NTA0OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_1&s=adab41de95c94a11b939&scm=20140719.manual.29097.show_adab41de95c94a11b939" title="高中女生变身虚拟偶像">
+				<img src="images/change.gif" />
+				<span>高中女生变身虚拟偶像</span>
+			</a>
+			<p>普通高校生成为偶像的秘密</p>
+			<b>25集全</b>
+		</div>
+		<!-- 左侧部分结束 -->
+		<!-- 中间部分开始 -->
+		<div class="iot_children_in">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTAxODI4MDY4OA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_2&s=abacb6b4b4a448308ba3&scm=20140719.manual.29097.show_abacb6b4b4a448308ba3&s=abacb6b4b4a448308ba3" title="深海英雄团决战星海城">
+						<div><img src="images/sea.gif" /></div>
+						<span>深海英雄团决战星海城</span>
+					</a>
+					<p>深海英雄团决战星海城</p>
+					<b>26集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE2MDE5OTk0MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_4&s=ffea7965a18a408da352&scm=20140719.rcmd.29097.show_ffea7965a18a408da352&s=ffea7965a18a408da352" title="白雪贝儿的故事">
+						<div><img src="images/white.png" /></div>
+						<span>白雪贝儿的故事</span>
+					</a>
+					<b>更新至100集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMTYzOTg4NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_6&s=afbf07882470435ab0f4&scm=20140719.rcmd.29097.show_afbf07882470435ab0f4" title="弹球积木跑道">
+						<div><img src="images/light.jpg" /></div>
+						<span>弹球积木跑道</span>
+					</a>
+					<p>五彩缤纷的积木闯关</p>
+					<b>更新至60集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzA4NzA4MA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_3&s=bfec8fae8b2248b98250&scm=20140719.rcmd.29097.show_bfec8fae8b2248b98250" title="帮帮龙家族1艾奇小队">
+						<div><img src="images/help.jpg" /></div>
+						<span>帮帮龙家族1艾奇小队</span>
+					</a>
+					<p>艾奇分队保卫小镇消防安全</p>
+					<i class="iot_label_db">独播</i>
+					<b>16集全</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjgwMzUzMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_5&s=cdaa9cece7ae4dc18412&scm=20140719.rcmd.29097.show_cdaa9cece7ae4dc18412" title="精灵梦叶罗丽 第九季">
+						<div><img src="images/ye.jpg" /></div>
+						<span>精灵梦叶罗丽 第九季</span>
+					</a>
+					<p>拯救海洋恶化垃圾场</p>
+					<i class="iot_label_sb">首播</i>
+					<b>更新至6集</b>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMjYzNDYyMA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj1_7&s=caaf421360804a07b09a&scm=20140719.rcmd.29097.show_caaf421360804a07b09a&s=caaf421360804a07b09a" title="熊熊帮帮团">
+						<div><img src="images/team.jpg" /></div>
+						<span>熊熊帮帮团</span>
+					</a>
+					<p>熊大熊二守护白熊山</p>
+					<b>52集全</b>
+				</li>
+			</ul>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 右边部分开始 -->
+		<div class="iot_children_r">
+			<ul>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE5NjUxNjUyOA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_1&s=fece197a2e8d48bfa1f9&scm=20140719.apircmd.29097.show_fece197a2e8d48bfa1f9">
+						<i> 
+							<img src="images/baby.jpg" />
+							<em>1</em>
+							<b>NO</b>
+						</i>
+						<span>宝贝赳赳 第三季</span>
+						<p>适龄启蒙亲子共学</p>
+						<strong>
+							<u>8389</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XMTYzMTY5MTAzNg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_2&s=a79dcec626ee11e6a080&scm=20140719.apircmd.29097.show_a79dcec626ee11e6a080&s=a79dcec626ee11e6a080">
+						<i> 
+							<img src="images/song.jpg" />
+							<em>2</em>
+							<b>NO</b>
+						</i>
+						<span>贝乐虎儿歌</span>
+						<p>轻快的亲子儿歌</p>
+						<strong>
+							<u>8286</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTE1OTkwNjgxMg==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_3&s=fcdac71576e147a89d89&scm=20140719.apircmd.29097.show_fcdac71576e147a89d89">
+						<i> 
+							<img src="images/wofu.jpg" />
+							<em>3</em>
+							<b>NO</b>
+						</i>
+						<span>沃福</span>
+						<p>观察学习智慧成长</p>
+						<strong>
+							<u>8219</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNDMxNjY5MjY0NA==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_4&s=deea83b06b3f42ed8255&scm=20140719.apircmd.29097.show_deea83b06b3f42ed8255">
+						<i> 
+							<img src="images/super.jpg" />
+							<em>4</em>
+						</i>
+						<span>超级宝贝JOJO</span>
+						<p>支援父母轻松育儿</p>
+						<strong>
+							<u>8029</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+				<li>
+					<a href="https://v.youku.com/v_show/id_XNTIwMzE5Mjg1Ng==.html?spm=a2ha1.14919748_WEBHOME_GRAY.drawer15.d_zj7_5&s=debec9745daa438c99eb&scm=20140719.apircmd.29097.show_debec9745daa438c99eb&s=debec9745daa438c99eb">
+						<i> 
+							<img src="images/magic.jpg" />
+							<em>5</em>
+						</i>
+						<span>奇妙萌可 第二季</span>
+						<p>闹闹萌可闯大祸</p>
+						<strong>
+							<u>7971</u>
+							<img src="images/fire.png"/>
+						</strong>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边部分结束 -->
+	</div>
+	<!-- 页面底部分 -->
+	<div class="iot_bottom iot_container">
+		<img src="images/blue.png" />
+		<i>我是有底线哒~</i>
+		<!-- 自定义标签 -->
+		<!-- 头部分开始 -->
+		<dl>
+			<dt>关于我们</dt>
+			<div id="iot_about">
+				<a href="https://acz.youku.com/wow/ykpage/act/about?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL~5~A">关于我们</a>
+				<a href="https://acz.youku.com/wow/ykpage/act/contact?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL~5~A!2">联系我们</a>
+				<a href="https://t.youku.com/yep/page/pc/youkukefu?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL~5~A!3&isNeedBaseImage=1">在线反馈</a>
+				<a href="https://acz.youku.com/wow/ykpage/act/q0c4t7n6nh?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL~5~A!4">帧享设备说明</a>
+				<a href="https://youku.com/product/index?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL~5~A!5">优酷产品中心</a>
+			</div>
+		</dl>
+		<dl class="iot_agree">
+			<dt>协议声明</dt>
+			<div id="iot_agreement">
+				<a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_unification/suit_bu1_unification202005142208_14749.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A">用户协议</a>
+				<a href="https://h5.m.youku.com/app/agreementALL.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A!2">历史协议文本</a>
+				<a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_unification/suit_bu1_unification201910091716_30362.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A!3">知识产权声明</a>
+				<a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_unification/suit_bu1_unification202005141916_91107.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A!4">隐私政策</a>
+				<a href="https://mapp.youku.com/service/zhanghuzhuxiao?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A!5">账号注销协议</a>
+				<a href="https://acz.youku.com/wow/ykpage/act/service_piracy?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!2~5~A!6">反盗链声明</a>
+			</div>
+		</dl>
+		<dl>
+			<dt>服务合作</dt>
+			<div id="iot_serve">
+				<a href="https://terms.alicdn.com/legal-agreement/terms/suit_bu1_unification/suit_bu1_unification201910091716_30362.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!3~5~A">侵权投诉</a>
+				<a href="https://acz.youku.com/wow/ykpage/act/adservice?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~DL!3~5~A!2">广告合作</a>
+				<a href="https://mp.youku.com/v2/login?callback=http%3A%2F%2Fmp.youku.com%2FindexV2">入驻优酷</a>
+				<a href="#">繁体字</a>
+			</div>
+		</dl>
+		<!-- 头部分结束 -->
+		<!-- 中间部分开始 -->
+		<div class="iot_bottom_in">
+			<a href="https://mapp.youku.com/service/licence/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A">网络文化经营许可证：京网文〔2021〕0046-003号</a>
+			<span>网络出版服务许可证：（署）网出证（京）字第266号</span>
+			<span>出版物经营许可证：新出发京批字第直150118号</span>
+			<span>信息网络传播视听节目许可证：0108283号</span>
+			<span>互联网药品信息服务资格证书（京）-经营性-2015-0029</span>
+			<span>广播电视节目制作经营许可证：（京）字第00670号</span>
+			<span>食品经营许可证：JY11108122976214</span>
+			<a href="http://mapp.youku.com/service/yingyezhizhao?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!2">营业执照</a>
+			<span>京ICP证060288号</span>
+			<a href="https://beian.miit.gov.cn/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!3">京ICP备06050721号-1</a>
+			<a href="http://www.cyberpolice.cn/wfjb/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!4">网络110报警服务</a>
+			<a href="http://www.bjjubao.org/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!5">北京互联网举报中心</a>
+			<a href="http://whzf.beijing.gov.cn/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!6">北京12318文化市场举报热线</a>
+			<a href="https://www.shdf.gov.cn/shdf/channels/740.html?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5~A!7">扫黄打非举报入口</a>
+			<span>违规不良信息举报:电话4008100580、邮箱youkujubao@service.alibaba.com</span>
+			<span>网络内容从业者违规举报：youkujubao-zx@alibaba-inc.com</span>
+			<span>未成年人有害信息举报邮箱:youkujubao-minors@service.alibaba.com</span>
+			<span>©2006-现在 Youku.com.版权所有</span>
+		</div>
+		<!-- 中间部分结束 -->
+		<!-- 底部分开始 -->
+		<div class="iot_bottom_b">
+			<a href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A">经营性网站备案信息</a>
+			<a href="https://www.12377.cn/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A!2">中国互联网举报中心</a>
+			<a href="https://www.12377.cn/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A!3">网上有害信息举报专区</a>
+			<a href="https://www.12377.cn/node_548446.htm?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A!4">网络举报APP下载</a>
+			<a href="http://www.beian.gov.cn/portal/registerSystemInfo?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A!5&recordcode=11000002000017">京公网安备11000002000017号</a>
+			<img src="images/jh.png" />
+			<a href="https://www.youku.com/">网络文化经营单位</a>
+			<a href="https://www.12377.cn/?spm=a2ha1.14919748_WEBHOME_GRAY.footer-container.5~5~5~5!2~A!7">暴恐音视频举报专区</a>
+		</div>
+		<!-- 底部分结束 -->
+	</div>
+</body>
+</html>

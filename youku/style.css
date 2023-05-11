@@ -1,0 +1,1842 @@
+/*&&css初始化开始&&*/
+* { 
+	margin: 0;
+	padding: 0; /*清除内外边距*/
+}
+ul {
+	list-style: none; /*去除列表样式小点*/
+	box-sizing: border-box; /*CSS3盒子模型 使border和padding都包含在width里面 免去计算*/
+}
+/*使用before和after双伪元素清除浮动*/
+.iot_clearfix:before, .iot_clearfix:after {
+	content: "";
+	display: table; /*触发bfc 防止外边距合并*/
+}
+.iot_clearfix:after {
+	clear: both;
+}
+.iot_clearfix {
+	*zoom: 1;
+}
+input {
+	border: 0; /*所有表单边框为0*/
+	box-sizing: border-box; /*CSS3盒子模型 使border和padding都包含在width里面 免去计算*/
+}
+.iot_container {
+	/*版心的宽度为1542px 而且都要居中对齐 就声明一个公共类*/
+	width: 1542px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none; /*取消下划线*/
+}
+.iot_label_VIP { /*右上角标签*/
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #ffd99d;
+	width: 34px;
+	height: 18px;
+	line-height: 18px;
+	font-style: normal; /*让倾斜的字体不倾斜*/
+	border-radius: 0 8px;
+	font-size: 12px;
+	text-align: center;
+}
+.iot_label_VIPbj {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #ffd99d;
+	width: 50px;
+	height: 18px;
+	line-height: 18px;
+	font-style: normal; /*让倾斜的字体不倾斜*/
+	border-radius: 0 8px;
+	font-size: 12px;
+	text-align: center;
+}
+.iot_label_db {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #ffd99d;
+	width: 34px;
+	height: 18px;
+	line-height: 18px;
+	font-style: normal; /*让倾斜的字体不倾斜*/
+	border-radius: 0 8px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #ff018d;
+}
+.iot_label_sb {
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #ffd99d;
+	width: 34px;
+	height: 18px;
+	line-height: 18px;
+	font-style: normal; /*让倾斜的字体不倾斜*/
+	border-radius: 0 8px;
+	font-size: 12px;
+	text-align: center;
+	color: #fff;
+	background-color: #03c1db;
+}
+/*&&css初始化结束&&*/
+
+/*&&页面头部分开始&&*/
+body {
+	background-color: #16151a; /*整个页面的背景色*/
+}
+header {
+	width: 100%;
+	height: 70px;
+	background: url(images/top-background.png) no-repeat;
+	background-size: 100% 100%;
+	box-sizing: border-box; /*使border和padding都包含在width里面*/
+	padding: 15px 0; /*让nav盒子垂直居中对齐*/
+	position: fixed; /*固定定位 完全脱标 不占有位置 不随滚动条滚动*/
+	z-index: 2; /*设置层级等级属性为1 防止页面头部分被层叠*/
+}
+header nav {
+	height: 40px;
+	position: relative; /*子绝父相*/
+}
+/*一.logo部分*/
+header nav img {
+	float: left;
+	width: 180px;
+	margin: 2px 0;
+}
+/*二.搜索框部分*/
+/*1.文本框开始*/
+.iot_search {
+	float: left;
+	height: 42px;
+	width: 560px;
+	background: rgba(255, 255, 255, 0.4); /*背景颜色半透明*/
+	margin-left: 216px;
+	border-radius: 100px; /*设置圆角矩形*/
+	position: relative; /*子绝父相*/
+}
+.iot_search .iot_text {
+	float: left;
+	width: 430px;
+	height: 42px;
+	outline: 0; /*取消轮廓线*/
+	font-size: 14px;
+	margin-left: 20px;
+	background: rgba(255, 255, 255, 0); /*设置文本框透明*/
+	color: #000;
+	margin-top: 3px;
+	color: rgba(255, 255, 255, 0.6);
+}
+.iot_search .iot_text::placeholder {
+	color: rgba(255, 255, 255, 0.6); /*伪元素选择器 修改input占位符中文字的颜色*/
+	
+}
+/*1.文本框结束*/
+/*2.小火苗开始*/
+.iot_search .iot_hot {
+	float: left;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(images/hot.png) no-repeat;
+	background-size: contain; /*保证图片始终完整显示在背景区域*/
+	margin-top: 13px;
+}
+/*2.小火苗结束*/
+/*3.文字热搜榜开始*/
+.iot_search .iot_word {
+	display: inline-block;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 14px;
+	margin-top: 13px;
+}
+.iot_search .iot_word:hover {
+	color: #61F6FF;
+}
+/*3.文字热搜榜结束*/
+/*4.搜索图标开始*/
+.iot_search .iot_tubiao {
+	display: block;
+	float: right;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%; /*方形变成圆*/
+	background-color: #fdd57e;
+	margin: 5px 4px 0 12px;
+}
+.iot_search .iot_tubiao img {
+	width: 18px;
+	height: 18px;
+	margin: 7px
+}
+/*4.搜索图标结束*/
+/*5.搜索框下拉菜单开始*/
+.iot_search ul {
+	width: 500px;
+	height: 400px;
+	background-color: #2A2A32;
+	border-radius: 5px;
+	position: absolute; /*绝对定位 不占位置*/
+	top: 43px;
+	left: 20px;  /*与文本框左侧对齐*/
+	padding: 15px 0 0 18px;
+	display: none; /*隐藏该下拉菜单*/
+}
+.iot_search ul li {
+	color: #A3A3A7;
+	padding: 7px 0;
+}
+.iot_search ul li a {
+	color: #A3A3A7;
+	font-size: 14px;
+}
+.iot_search ul li a:hover {
+	color: #61F6FF; /*鼠标经过时文字变色*/
+}
+.iot_search #iot_one {
+	color: #B43A5D;
+}
+.iot_search #iot_two {
+	color: #EF7A52;
+}
+.iot_search #iot_three {
+	color: #FCB80A;
+}
+.iot_search #iot_1,
+.iot_search #iot_3,
+.iot_search #iot_4,
+.iot_search #iot_5,
+.iot_search #iot_6,
+.iot_search #iot_7 {
+	display: inline-block;
+	box-sizing: border-box;
+	font-size: 12px;
+	width: 17px;
+	height: 17px;
+	background-color: #FC4273;
+	color: #fff;
+	border-radius: 4px;
+	padding-left: 2px;
+}
+.iot_search #iot_4,
+.iot_search #iot_6 {
+	background-color: #FF8155;
+}
+/*5.搜索框下拉菜单结束*/
+/*6.点击按钮开始*/
+.iot_search .iot_check:checked ~ ul {
+	display: block;
+}
+input[type="checkbox"] {
+	width: 0.3em;
+	height: 0.3em;
+	position: absolute;
+	left: 14px;
+	top: 23px;
+}
+/*6.点击按钮结束*/
+/*三.右侧导航栏部分*/
+ .iot_right {
+	float: right;
+	height: 40px;
+}
+.iot_right li {
+	float: left;
+	width: 52px;
+	height: 40px;
+	margin: 0 5px;
+	cursor: pointer; /*鼠标样式为小手*/
+}
+/*1.开通会员开始*/
+.iot_right .iot_vip #iot_access {
+	width: 24px;
+	height: 24px;
+	margin: 0 14px;
+}
+.iot_right .iot_vip span {
+	font-size: 13px;
+	color: #FFCA83;
+	display: block;  /*行内元素变为块元素*/
+	text-align: center; /*文字在盒子里面水平居中*/
+}
+/*开通会员悬浮框开始*/
+.iot_vip1 {
+	width: 196px;
+	height: 194px;
+	background-color: #2A2A32;
+	position: absolute;
+	top: 55px;
+	left: -73px;
+	border-radius: 5px;
+	display: none;  /*隐藏该菜单*/
+	cursor: default; /*鼠标显示箭头形状*/
+}
+.iot_vip1 .iot_sj {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -16px;
+	left: 94px;
+}
+.iot_vip1 ul {
+	margin: 10px 20px;
+}
+.iot_vip1 ul li {
+	margin-left: 8px;
+	width: 150px;
+	height: 45px;
+	line-height: 45px; 
+	font-size: 14px;
+}
+.iot_vip1 ul li:first-child img,
+.iot_vip1 ul li:nth-child(2) img,
+.iot_vip1 ul li:nth-child(3) img {
+	width: 24px;
+	height: 20px;
+	margin: 12px 10px 0 0;
+}
+.iot_vip1 ul li:last-child {
+	width: 98px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #000;
+	margin: 0 20px;
+	border-radius: 20px;
+	background-color: #FFDD9A;
+}
+.iot_vip1 ul li a {
+	color: #E3E3E4;
+	display: inline-block;
+	width: 100px;
+}
+.iot_vip1 ul li:last-child a {
+	color: #733306;
+}
+.iot_vip1 ul li:first-child a:hover,
+.iot_vip1 ul li:nth-child(2) a:hover,
+.iot_vip1 ul li:nth-child(3) a:hover {
+	color: #FFDD9A;
+}
+.iot_vip:hover .iot_vip1 {
+	display: block;	/*当鼠标悬停时 悬浮菜单显示*/
+}
+/*开通会员悬浮框结束*/
+/*1.开通会员结束*/
+/*2.播放记录，关注，上传，客户端，手机端开始*/
+.iot_record,
+.iot_attention,
+.iot_upload,
+.iot_customer,
+.iot_phone {
+	position: relative; /*子绝父相*/
+}
+.iot_record #iot_clock,
+.iot_attention #iot_at,
+.iot_upload #iot_up,
+.iot_customer #iot_cs,
+.iot_phone #iot_ph {
+	width: 24px;
+	height: 24px;
+	margin: 0 14px;
+}
+.iot_record span,
+.iot_attention span,
+.iot_upload span,
+.iot_customer span,
+.iot_phone span {
+	font-size: 13px;
+	color: #e6e6e6;
+	display: block;  /*行内元素变为块元素*/
+	text-align: center; /*文字在盒子里面水平居中*/
+}
+.iot_record:hover span,
+.iot_attention:hover span,
+.iot_upload:hover span,
+.iot_customer:hover span,
+.iot_phone:hover span {
+	color: #61F6FF;
+}
+.iot_record #iot_rd_change,
+.iot_attention #iot_at_change,
+.iot_upload #iot_up_change,
+.iot_customer #iot_cs_change,
+.iot_phone #iot_ph_change {
+	display: none; /*隐藏图片*/
+	position: absolute; 
+	width: 24px;
+	height: 24px;
+	left: 14px;
+	top: -1px;
+}
+.iot_record:hover #iot_rd_change,
+.iot_attention:hover #iot_at_change,
+.iot_upload:hover #iot_up_change,
+.iot_customer:hover #iot_cs_change,
+.iot_phone:hover #iot_ph_change {
+	display: block;
+}
+
+/*2.播放记录，关注，上传，客户端，手机端结束*/
+/*3.开通会员，手机端小图标开始*/
+.iot_phone,
+.iot_vip {
+	position: relative;
+}
+.iot_free,
+.iot_mark {
+	width: 54px;
+	height: 18px;
+	line-height: 18px; /*垂直居中对齐*/
+	text-align: center; /*文字水平居中*/
+	position: absolute; /*绝对定位 不占位置*/
+	left: 20px; 
+	top: -5px;
+	background-color: #ff0d4d;
+	color: #fff;
+	font-size: 12px;
+	transform: scale(0.7); /*2D缩放属性 如果只写一个参数 代表宽度和高度都缩放*/
+	border-radius: 8px; /*圆角矩形*/
+}
+/*3.开通会员，手机端小图标结束*/
+/*4.小猴子图片开始*/
+.iot_monkey {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%; /*圆形*/
+	float: right;
+	background: url(images/monkey.png) no-repeat;
+	background-size: contain;
+	margin-left: 10px;
+	cursor: pointer; /*鼠标样式为小手*/
+	position: relative;
+}
+/*小猴子悬浮图标开始*/
+.iot_unlisted {
+	width: 45px;
+	height: 20px;
+	line-height: 20px; /*垂直居中对齐*/
+	text-align: center; /*文字水平居中*/
+	position: absolute; /*绝对定位 不占位置*/
+	left: 28px; 
+	top: -5px;
+	background-color: #0D9BFF;
+	color: #fff;
+	font-size: 12px;
+	transform: scale(0.8); /*2D缩放属性 如果只写一个参数 代表宽度和高度都缩放*/
+	border-radius: 10px 0; /*圆角矩形*/
+}
+/*小猴子悬浮图标结束*/
+/*4.小猴子图片结束*/
+/*5.上传悬浮菜单开始*/
+.iot_upload {
+	position: relative; /*子绝父相*/
+}
+.iot_up_menu {
+	width: 150px;
+	height: 200px;
+	position: absolute;
+	left: -40px;
+	top: 55px;
+	background-color: #2A2A32;
+	cursor: default; /*鼠标显示箭头形状*/
+	border-radius: 5px;
+	display: none; /*隐藏悬浮菜单*/
+}
+.iot_up_menu .iot_sj {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -16px;
+	left: 62px;
+}
+.iot_up_menu ul {
+	margin: 6px 20px;
+}
+.iot_up_menu ul li {
+	margin-left: -3px;
+	width: 150px;
+	height: 45px;
+	line-height: 45px; 
+}
+.iot_up_menu ul li:first-child img,
+.iot_up_menu ul li:nth-child(2) img,
+.iot_up_menu ul li:nth-child(3) img,
+.iot_up_menu ul li:last-child img {
+	width: 24px;
+	height: 24px;
+	margin: 12px 10px 0 0;
+}
+.iot_up_menu a {
+	font-size: 14px;
+	color: #a7a7aa;
+}
+.iot_up_menu a:hover {
+	color: #61F6FF;
+}
+.iot_upload:hover .iot_up_menu {
+	display: block; /*不占位置 悬浮菜单显示*/
+}
+/*5.上传悬浮菜单结束*/
+/*6.客户端悬浮菜单开始*/
+.iot_customer {
+	position: relative; /*子绝父相*/
+}
+.iot_cs_menu {
+	width: 185px;
+	height: 194px;
+	background-color: #2A2A32;
+	position: absolute;
+	top: 55px;
+	left: -65px;
+	border-radius: 5px;
+	display: none;  /*隐藏该菜单*/
+	cursor: default; /*鼠标显示箭头形状*/
+}
+.iot_cs_menu .iot_sj {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -16px;
+	left: 85px;
+}
+.iot_cs_menu ul {
+	margin: 10px 20px;
+}
+.iot_cs_menu ul li {
+	margin-left: 8px;
+	width: 150px;
+	height: 45px;
+	line-height: 45px; 
+	font-size: 14px;
+}
+.iot_cs_menu ul li:first-child img,
+.iot_cs_menu ul li:nth-child(2) img,
+.iot_cs_menu ul li:nth-child(3) img {
+	width: 24px;
+	height: 20px;
+	margin: 12px 10px 0 0;
+}
+.iot_cs_menu ul li:last-child {
+	width: 98px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #000;
+	margin: 0 20px;
+	border-radius: 20px;
+	background-color: #ff008c;
+}
+.iot_cs_menu  a {
+	color: #a7a7aa;
+}
+.iot_cs_menu a:hover{
+	color: #61F6FF;
+}
+.iot_cs_menu ul li:last-child a {
+	color: #fff;
+}
+.iot_customer:hover .iot_cs_menu {
+	display: block;	/*当鼠标悬停时 悬浮菜单显示*/
+}
+/*6.客户端悬浮菜单开始*/
+/*7.手机端悬浮二维码开始*/
+.iot_phone {
+	position: relative; /*子绝父相*/
+}
+.iot_ph_menu {
+	width: 200px;
+	height: 240px;
+	position: absolute;
+	background-color: #2A2A32;
+	top: 55px;
+	left: -77px;
+	border-radius: 5px;
+	cursor: default; /*鼠标显示箭头形状*/
+	box-sizing: border-box;
+	padding: 15px 25px;
+	display: none; /*隐藏悬浮二维码*/
+}
+.iot_ph_menu .iot_sj {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: -16px;
+	left: 96px;
+}
+.iot_ph_menu p {
+	font-size: 12px;
+	color: #e3e3e4;
+	cursor: text; /*鼠标样式为文本形式*/
+}
+.iot_ph_menu .iot_code {
+	width: 120px;
+	height: 120px;
+	background: url(images/code.png) no-repeat;
+	background-size: 100% 100%;
+	border-radius: 8px;
+	margin: 15px;
+}
+.iot_phone:hover .iot_ph_menu {
+	display: block;
+}
+/*7.手机端悬浮二维码结束*/
+/*&&页面头部分结束&&*/
+
+/*&&banner部分开始&&*/
+.iot_banner {
+	height: 540px;
+	width: 100%;
+	position: relative; /*子绝父相*/
+	overflow: hidden; /*溢出部分隐藏*/
+}
+.iot_banner_in {
+	height: 540px;
+}
+.iot_banner a .iot_adv {
+	width: 100%;
+}
+/*1.左右模糊阴影开始*/
+.iot_banner_l,
+.iot_banner_r {
+	position: absolute;
+	height: 540px;
+	width: 160px;
+	transform: scale(1.5); /*防止出现背景模糊效果周围的白边*/
+	background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1)); /*设置背景颜色过渡*/
+	filter: blur(20px); /*设置背景模糊效果*/
+	top: 0;
+}
+.iot_banner_l {
+	left: 0;
+}
+.iot_banner_r {
+	background-image: linear-gradient(to left, black, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.1)); /*设置背景颜色过渡*/
+	right: 0;
+}
+/*1.左右模糊阴影结束*/
+/*2.播放按钮,添加看单开始*/
+.iot_banner #iot_play,
+.iot_banner #iot_add {
+	position: absolute; /*绝对定位 不占位置*/
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%; /*圆形*/
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.6);
+	bottom: 110px;
+	left: 76px;
+	transition: all 0.3s; /*过渡效果*/
+	z-index: 1;
+}
+.iot_banner #iot_add {
+	left: 150px;
+}
+.iot_banner #iot_play span {
+	background: url(images/play.png) no-repeat;
+}
+.iot_banner #iot_add span {
+	background: url(images/star.png) no-repeat;
+}
+.iot_banner #iot_play span,
+.iot_banner #iot_add span {
+	display: block;
+	width: 26px;
+	height: 26px;
+	margin: 12px;
+	background-size: cover;
+}
+#iot_play:hover,
+#iot_add:hover {
+	transform: scale(1.2); /*鼠标悬停时 播放按钮变大*/
+}
+/*2.播放按钮,添加看单结束*/
+/*3.右侧导航栏开始*/
+/*整体框架*/
+.iot_banner .iot_nav {
+	position: absolute;
+	width: 300px;
+	height: 398px;
+	bottom: 70px;
+	right: 70px;
+	box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+}
+.iot_nav .iot_program li{
+	width: 100%;
+	height: 48px;
+}
+.iot_nav .iot_program li span {
+	position: relative;
+	top: 10px;
+	left: 20px;
+	color: rgba(255, 255, 255, 0.5);
+}
+.iot_program li p {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 12px;
+	position: relative;
+	left: 20px;
+	top: 11px;
+	display: none;
+}
+/*默认框架*/
+.iot_nav .iot_program li:first-child {
+	background: rgba(255, 255, 255, 0.2);
+	height: 55px;
+}
+.iot_nav .iot_program li:first-child p {
+	top: 5px;
+	display: block;
+}
+.iot_nav .iot_program li:first-child span {
+	top: 0;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+}
+/*悬浮框架*/
+.iot_program li:hover {
+	background: rgba(255, 255, 255, 0.2);
+	height: 55px;
+}
+.iot_program li:hover p {
+	display: block;
+	top: 5px;
+}
+.iot_program li:hover span {
+	top: 0;
+	color: #fff;
+	font-weight: 700;
+	font-size: 20px;
+}
+/*3.右侧导航栏结束*/
+/*4.下侧导航栏开始*/
+/*模糊阴影效果部分*/
+.iot_nav_bottom {
+	position: absolute;
+	height: 160px;
+	width: 100%;
+	/*background-color: pink;*/
+	background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.1)); /*设置背景颜色过渡*/
+	filter: blur(20px); /*设置背景模糊效果*/
+	transform: scale(1.5);
+	bottom: 0;
+}
+/*正文部分*/
+/*左部分*/
+.iot_nav_bottom_l {
+	position: absolute;
+	bottom: 0;
+	left: 80px;
+	width: 1000px;
+	height: 56px;
+	box-sizing: border-box;
+	padding: 0 24px;
+}
+.iot_TV,
+.iot_vary,
+.iot_film,
+.iot_cartoon,
+.iot_child {
+	display: inline-block;
+	width: 70px;
+	height: 28px;
+	line-height: 28px; /*文字垂直居中*/
+	margin-right: 140px;
+	font-size: 23px;
+	font-weight: 700;
+	text-align: center; /*文字水平居中*/
+}
+.iot_TV a,
+.iot_vary a,
+.iot_film a,
+.iot_cartoon a,
+.iot_child a {
+	color: #fff;
+}
+.iot_TV_bottom,
+.iot_vary_bottom,
+.iot_film_bottom,
+.iot_cartoon_bottom,
+.iot_child_bottom {
+	display: inline-block;
+	height: 16px;
+	margin-top: 8px;
+}
+.iot_child,
+.iot_child_bottom {
+	margin-right: 0;
+}
+.iot_TV_bottom a,
+.iot_vary_bottom a,
+.iot_film_bottom a,
+.iot_cartoon_bottom a,
+.iot_child_bottom a {
+	color: rgba(255, 255, 255, 0.5);
+}
+.iot_TV_bottom a:hover,
+.iot_vary_bottom a:hover,
+.iot_film_bottom a:hover,
+.iot_cartoon_bottom a:hover,
+.iot_child_bottom a:hover {
+	color: #61F6FF;
+}
+.iot_TV_bottom {
+	margin-left: -6px;
+}
+.iot_vary_bottom {
+	margin-left: 98px;
+}
+.iot_film_bottom {
+	margin-left: 98px;
+}
+.iot_cartoon_bottom {
+	margin-left: 122px;
+}
+.iot_child_bottom {
+	margin-left: 142px;
+}
+/*中部分*/
+.iot_nav_bottom_in {
+	position: absolute;
+	bottom: 0;
+	right: 382px;
+	width: 198px;
+	height: 60px;
+	border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+.iot_nav_bottom_in a {
+	display: inline-block;
+	margin-left: 10px;
+	color: rgba(255, 255, 255, 0.9);
+}
+.iot_nav_bottom_in a:hover {
+	color: #61F6FF;
+}
+#iot_xt,
+#iot_ty,
+#iot_gd {
+	margin-top: 18px;
+}
+#iot_ty {
+	margin-left: 28px;
+}
+/*右侧部分*/
+.iot_nav_bottom_r {
+	position: absolute;
+	bottom: 0;
+	right: 70px;
+	width: 260px;
+	height: 60px;
+}
+.iot_nav_bottom_r img {
+	width: 32px;
+	height: 32px;
+	margin-left: 19px;
+}
+.iot_nav_bottom_r span {
+	margin-left: 5px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.8);
+}
+.iot_nav_bottom_r span:hover {
+	color: #61F6FF;
+}
+.iot_nav_bottom_r1,
+.iot_nav_bottom_r2,
+.iot_nav_bottom_r3 {
+	display: inline-block;
+	width: 70px;
+	height: 60px;
+	margin-left: 10px;
+}
+/*悬浮图片盒子开始*/
+.iot_TV_menu,
+.iot_vary_menu,
+.iot_film_menu,
+.iot_cartoon_menu,
+.iot_child_menu {
+	position: absolute;
+	bottom: 64px;
+	left: 12px;
+	width: 480px;
+	height: 210px;
+	background-color: #2a2a32;
+	border-radius: 8px;
+	display: none;
+	cursor: default; 
+	box-sizing: border-box;
+	padding: 10px 15px;
+	z-index: 1;
+}
+.iot_vary_menu {
+	left: 224px;
+}
+.iot_film_menu {
+	left: 428px;
+}
+.iot_cartoon_menu {
+	left: 644px;
+}
+.iot_child_menu {
+	left: 860px;
+}
+.iot_TV:hover .iot_TV_menu,
+.iot_vary:hover .iot_vary_menu,
+.iot_film:hover .iot_film_menu,
+.iot_cartoon:hover .iot_cartoon_menu,
+.iot_child:hover .iot_child_menu {
+	display: block;
+}
+.iot_TV_menu #iot_sj,
+.iot_vary_menu #iot_sj,
+.iot_film_menu #iot_sj,
+.iot_cartoon_menu #iot_sj,
+.iot_child_menu #iot_sj {
+	position: absolute;
+	bottom: -9px;
+	left: 36px;
+}
+#iot_manytv,
+#iot_manyvary,
+#iot_manyfilm,
+#iot_manycartoon,
+#iot_manychild {
+	display: block;
+	position: relative;
+	top: -8px;
+	left: -176px;
+	font-size: 15px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.6);
+}
+#iot_village,
+#iot_dress,
+#iot_love,
+#iot_mirror,
+#iot_happy1,
+#iot_happy2,
+#iot_zy,
+#iot_band,
+#iot_hugyou,
+#iot_provide,
+#iot_lake,
+#iot_kill,
+#iot_chui,
+#iot_taste,
+#iot_huoyin,
+#iot_mini,
+#iot_super,
+#iot_egg,
+#iot_song,
+#iot_baby {
+	position: relative;
+	top: -4px;
+	display: inline-block;
+	width: 106px;
+	height: 166px;
+}
+#iot_village img,
+#iot_dress img,
+#iot_love img,
+#iot_mirror img,
+#iot_happy1 img,
+#iot_happy2 img,
+#iot_zy img,
+#iot_band img,
+#iot_hugyou img,
+#iot_provide img,
+#iot_lake img,
+#iot_kill img,
+#iot_chui img,
+#iot_taste img,
+#iot_huoyin img,
+#iot_mini img,
+#iot_super img,
+#iot_egg img,
+#iot_song img,
+#iot_baby img {
+	width: 108px;
+	height: 145px;
+	border-radius: 8px;
+}
+#iot_village p,
+#iot_dress p,
+#iot_love p,
+#iot_mirror p,
+#iot_happy1 p,
+#iot_happy2 p,
+#iot_zy p,
+#iot_band p,
+#iot_hugyou p,
+#iot_provide p,
+#iot_lake p,
+#iot_kill p,
+#iot_chui p,
+#iot_taste p,
+#iot_huoyin p,
+#iot_mini p,
+#iot_super p,
+#iot_egg p,
+#iot_song p,
+#iot_baby p {
+	font-size: 14px;
+	font-weight: 700;
+	color: rgba(255, 255, 255, 0.6);
+}
+#iot_manytv:hover,
+#iot_village p:hover,
+#iot_dress p:hover,
+#iot_love p:hover,
+#iot_mirror p:hover,
+#iot_manyvary:hover,
+#iot_happy1 p:hover,
+#iot_happy2 p:hover,
+#iot_zy p:hover,
+#iot_band p:hover,
+#iot_manyfilm:hover,
+#iot_hugyou p:hover,
+#iot_provide p:hover,
+#iot_lake p:hover,
+#iot_kill p:hover,
+#iot_manycartoon:hover,
+#iot_chui p:hover,
+#iot_taste p:hover,
+#iot_huoyin p:hover,
+#iot_mini p:hover,
+#iot_manychild:hover,
+#iot_super p:hover,
+#iot_egg p:hover,
+#iot_song p:hover,
+#iot_baby p:hover {
+	color: #61F6FF;
+}
+/*悬浮图片盒子结束*/
+/*4.下侧导航栏结束*/
+/*&&banner部分结束&&*/
+
+/*&&正在热播部分开始&&*/
+/*头部分开始*/
+.iot_hot {
+	margin-top: 68px;
+	height: 225px;
+}
+.iot_hot_top {
+	height: 50px;
+	margin-bottom: 12px;
+}
+.iot_hot_top h2 {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+}
+.iot_hot_top a {
+	display: inline-block;
+	height: 60px;
+	line-height: 60px;
+	margin-left: 25px;
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.6);
+}
+.iot_hot_top a:hover {
+	color: #61F6FF;
+}
+/*头部分结束*/
+/*底部分开始*/
+.iot_hot_bottom {
+	height: 163px;
+}
+.iot_hot_bottom ul li {
+	display: inline-block;
+	margin-right: 19px;
+	position: relative; /*子绝父相*/
+}
+.iot_hot_bottom ul li:last-child {
+	margin-right: -1px;
+}
+.iot_hot_bottom ul li {
+	width: 200px;
+	height: 163px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.iot_hot_bottom  li a div img {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	transition: all 0.5s;
+}
+.iot_hot_bottom  li a div {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.iot_hot_bottom  li a div img:hover {
+	transform: scale(1.1);
+}
+.iot_hot_bottom  li a span {
+	color: rgba(255, 255, 255, 0.9);
+}
+.iot_hot_bottom  li a span:hover {
+	color: #61F6FF;
+}
+.iot_hot_bottom  li p {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 6px;
+}
+/*底部分结束*/
+/*小角标部分开始*/
+.iot_hot_bottom b {
+	position: absolute;
+	right: 7px;
+	bottom: 47px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 12px;
+}
+/*小角标部分结束*/
+/*&&正在热播部分开始&&*/
+
+/*&&猜你在追部分开始&&*/
+.iot_guess {
+	height: 225px;
+	margin-top: 40px;
+}
+.iot_guess_top {
+	height: 50px;
+	margin-bottom: 12px;
+}
+.iot_guess_top h2 {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+}
+.iot_guess_bottom {
+	height: 163px;
+}
+.iot_guess_bottom ul li {
+	display: inline-block;
+	margin-right: 19px;
+	position: relative; /*子绝父相*/
+}
+.iot_guess_bottom ul li:last-child {
+	margin-right: -1px;
+}
+.iot_guess_bottom ul li {
+	width: 200px;
+	height: 163px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.iot_guess_bottom li a div img {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	transition: all 0.5s;
+}
+.iot_guess_bottom  li a div {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.iot_guess_bottom  li a div img:hover {
+	transform: scale(1.1);
+}
+.iot_guess_bottom  li a span {
+	color: rgba(255, 255, 255, 0.9);
+}
+.iot_guess_bottom  li a span:hover {
+	color: #61F6FF;
+}
+.iot_guess_bottom  li p {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 6px;
+}
+
+.iot_guess_bottom b {
+	position: absolute;
+	right: 7px;
+	bottom: 47px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 12px;
+}
+.iot_guess_bottom li:nth-child(2) b,
+.iot_guess_bottom li:nth-child(3) b,
+.iot_guess_bottom li:nth-child(5) b,
+.iot_guess_bottom li:nth-child(6) b {
+	font-weight: 700;
+	color: #61F6FF;
+	font-size: 14px;
+}
+/*&&猜你在追部分结束&&*/
+
+/*电视剧大模块部分,综艺部分,动漫部分，少儿部分开始*/
+/*头部分开始+电影头部分+会员头部分*/
+.iot_drama,
+.iot_show,
+.iot_mv,
+.iot_member,
+.iot_comic,
+.iot_children {
+	height: 390px;
+	margin-top: 40px;
+	position: relative;
+}
+.iot_drama_top,
+.iot_show_top,
+.iot_mv_top,
+.iot_member_top,
+.iot_comic_top,
+.iot_children_top {
+	height: 50px;
+}
+.iot_drama_top h2,
+.iot_show_top h2,
+.iot_mv_top h2,
+.iot_member_top h2,
+.iot_comic_top h2,
+.iot_children_top h2 {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+}
+.iot_drama_top h2:hover,
+.iot_show_top h2:hover,
+.iot_mv_top h2:hover,
+.iot_member_top h2:hover,
+.iot_comic_top h2:hover,
+.iot_children_top h2:hover {
+	color: #61F6FF;
+}
+.iot_drama_top span,
+.iot_show_top span,
+.iot_mv_top span,
+.iot_member_top span,
+.iot_comic_top span,
+.iot_children_top span {
+	cursor: pointer;
+	display: inline-block;
+	width: 56px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	margin-top: 10px;
+	font-size: 14px;
+	margin-left: 15px;
+}
+.iot_show_top span,
+.iot_mv_top span,
+.iot_member_top span,
+.iot_comic_top span,
+.iot_children_top span {
+	width: 70px;
+}
+.iot_drama_top #iot_new,
+.iot_show_top #iot_new_show,
+.iot_mv_top #iot_mv_hot,
+.iot_member_top #iot_new_member,
+.iot_comic_top #iot_comic_hot,
+.iot_children_top #iot_children_new {
+	background-color: #ff0091;
+}
+.iot_drama_top span:hover,
+.iot_show_top span:hover,
+.iot_mv_top span:hover,
+.iot_member_top span:hover,
+.iot_comic_top span:hover,
+.iot_children_top span:hover {
+	background-color: #ff0091;
+}
+.iot_drama_top h3,
+.iot_show_top h3,
+.iot_mv_top h3,
+.iot_comic_top h3,
+.iot_children_top h3 {
+	font-size: 24px;
+	float: right;
+	height: 50px;
+	line-height: 50px;
+	color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+	margin-right: 270px;
+}
+/*头部分结束+电影头部分+会员头部分*/
+/*左部分开始*/
+.iot_drama_l,
+.iot_show_l,
+.iot_comic_l,
+.iot_children_l {
+	width: 420px;
+	height: 330px;
+	background-color: #26252b;
+	border-radius: 8px;
+	position: relative; /*子绝父相*/
+	float: left;
+	margin-top: 10px;
+}
+.iot_drama_l a img,
+.iot_show_l a img,
+.iot_comic_l a img,
+.iot_children_l a img {
+	width: 100%;
+	height: 235px;
+	background-color: skyblue;
+	border-radius: 8px;
+}
+.iot_drama_l a span,
+.iot_show_l a span,
+.iot_comic_l a span,
+.iot_children_l a span {
+	display: inline-block;
+	margin-top: 28px;
+	margin-left: 15px;
+	color: #fff;
+}
+.iot_drama_l a span:hover,
+.iot_show_l a span:hover,
+.iot_comic_l a span:hover,
+.iot_children_l a span:hover {
+	color: #61F6FF;
+}
+.iot_drama_l p,
+.iot_show_l p,
+.iot_comic_l p,
+.iot_children_l p {
+	margin-top: 6px;
+	margin-left: 15px;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 14px;
+}
+.iot_drama_l b,
+.iot_show_l b,
+.iot_comic_l b,
+.iot_children_l b {
+	font-weight: 400;
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	bottom: 104px;
+	right: 8px;
+}
+/*左部分结束*/
+/*中间部分开始*/
+.iot_drama_in,
+.iot_show_in,
+.iot_comic_in,
+.iot_children_in {
+	width: 700px;
+	height: 340px;
+	margin-left: 430px;
+}
+.iot_drama_in ul,
+.iot_show_in ul,
+.iot_comic_in ul,
+.iot_children_in ul {
+	margin-left: 18px;
+	margin-top: 10px;
+}
+.iot_drama_in ul li,
+.iot_show_in ul li,
+.iot_comic_in ul li,
+.iot_children_in ul li {
+	display: inline-block;
+	margin-right: 19px;
+	position: relative; /*子绝父相*/
+	width: 200px;
+	height: 163px;
+	overflow: hidden;
+	border-radius: 8px;
+}
+.iot_drama_in ul li:last-child,
+.iot_show_in ul li:last-child,
+.iot_comic_in ul li:last-child,
+.iot_children_in ul li:last-child {
+	margin-right: -1px;
+}
+.iot_drama_in li a div img,
+.iot_show_in li a div img,
+.iot_comic_in li a div img,
+.iot_children_in li a div img {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	transition: all 0.5s;
+}
+.iot_drama_in  li a div,
+.iot_show_in  li a div,
+.iot_comic_in li a div,
+.iot_children_in li a div {
+	width: 200px;
+	height: 115px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.iot_drama_in  li a div img:hover,
+.iot_show_in  li a div img:hover,
+.iot_comic_in li a div img:hover,
+.iot_children_in li a div img:hover {
+	transform: scale(1.1);
+}
+.iot_drama_in  li a span,
+.iot_show_in  li a span,
+.iot_comic_in li a span,
+.iot_children_in li a span {
+	color: rgba(255, 255, 255, 0.9);
+}
+.iot_drama_in  li a span:hover,
+.iot_show_in  li a span:hover,
+.iot_comic_in li a span:hover,
+.iot_children_in li a span:hover {
+	color: #61F6FF;
+}
+.iot_drama_in  li p,
+.iot_show_in  li p,
+.iot_comic_in li p,
+.iot_children_in li p {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 6px;
+}
+.iot_drama_in li b,
+.iot_show_in li b,
+.iot_comic_in li b,
+.iot_children_in li b {
+	position: absolute;
+	right: 7px;
+	bottom: 47px;
+	color: #fff;
+	font-weight: 400;
+	font-size: 12px;
+}
+/*中间部分结束*/
+/*右侧部分开始+电影右部分开始*/
+.iot_drama_r,
+.iot_show_r,
+.iot_mv_r,
+.iot_comic_r,
+.iot_children_r {
+	position: absolute;
+	width: 410px;
+	height: 330px;
+	top: 60px;
+	right: 0;
+}
+.iot_drama_r li,
+.iot_show_r li,
+.iot_mv_r li,
+.iot_comic_r li,
+.iot_children_r li {
+	box-sizing: border-box;
+	height: 66px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+	position: relative;
+}
+.iot_drama_r li i,
+.iot_show_r li i,
+.iot_mv_r li i,
+.iot_comic_r li i,
+.iot_children_r li i {
+	position: relative;
+	display: inline-block;
+	height: 66px;
+	line-height: 66px;
+	width: 50px;
+}
+.iot_drama_r li i em,
+.iot_show_r li i em,
+.iot_mv_r li i em,
+.iot_comic_r li i em,
+.iot_children_r li i em {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+	margin-left: 12px;
+	color: #ff4f3f;
+}
+.iot_drama_r li i b,
+.iot_show_r li i b,
+.iot_mv_r li i b,
+.iot_comic_r li i b,
+.iot_children_r li i b {
+	position: absolute;
+	font-size: 25px;
+	left: 50%;
+	transform: translate(-50%); /*走自己宽的的一半*/
+	color: rgba(255, 255, 255, 0.1);
+	top: 5px;
+}
+.iot_drama_r li span,
+.iot_show_r li span,
+.iot_mv_r li span,
+.iot_comic_r li span,
+.iot_children_r li span {
+	position: absolute;
+	top: 14px;
+	left: 56px;
+	color: #fff;
+}
+.iot_drama_r li p,
+.iot_show_r li p,
+.iot_mv_r li p,
+.iot_comic_r li p,
+.iot_children_r li p {
+	display: inline-block;
+	position: absolute;
+	top: 34px;
+	left: 56px;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 13px;
+}
+.iot_drama_r li:nth-child(2) em,
+.iot_show_r li:nth-child(2) em,
+.iot_mv_r li:nth-child(2) em,
+.iot_comic_r li:nth-child(2) em,
+.iot_children_r li:nth-child(2) em {
+	color: #ea6b00;
+}
+.iot_drama_r li:nth-child(3) em,
+.iot_show_r li:nth-child(3) em,
+.iot_mv_r li:nth-child(3) em,
+.iot_comic_r li:nth-child(3) em,
+.iot_children_r li:nth-child(3) em {
+	color: #f8b600;
+}
+.iot_drama_r li:nth-child(4) em,
+.iot_drama_r li:nth-child(5) em,
+.iot_show_r li:nth-child(4) em,
+.iot_show_r li:nth-child(5) em,
+.iot_comic_r li:nth-child(4) em,
+.iot_comic_r li:nth-child(5) em,
+.iot_children_r li:nth-child(4) em,
+.iot_children_r li:nth-child(5) em {
+	color: #969799;
+}
+.iot_mv_r li:nth-child(4) em,
+.iot_mv_r li:nth-child(5) em,
+.iot_mv_r li:nth-child(6) em,
+.iot_mv_r li:nth-child(7) em,
+.iot_mv_r li:nth-child(8) em,
+.iot_mv_r li:nth-child(9) em,
+.iot_mv_r li:nth-child(10) em {
+	color: #969799
+}
+.iot_drama_r li:hover span,
+.iot_show_r li:hover span,
+.iot_mv_r li:hover span,
+.iot_comic_r li:hover span,
+.iot_children_r li:hover span {
+	color: #61F6FF;
+}
+.iot_drama_r li:hover,
+.iot_show_r li:hover,
+.iot_mv_r li:hover,
+.iot_comic_r li:hover,
+.iot_children_r li:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+.iot_drama_r li i img,
+.iot_show_r li i img,
+.iot_mv_r li i img,
+.iot_comic_r li i img,
+.iot_children_r li i img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.iot_drama_r li:hover i img,
+.iot_show_r li:hover i img,
+.iot_mv_r li:hover i img,
+.iot_comic_r li:hover i img,
+.iot_children_r li:hover i img {
+	display: block;
+}
+.iot_drama_r strong u,
+.iot_show_r strong u,
+.iot_mv_r strong u,
+.iot_comic_r strong u,
+.iot_children_r strong u {
+	position: absolute;
+	right: 0;
+	top: 0;
+	text-decoration: none; /*取消下划线*/
+	color: #ff018d;
+	font-size: 12px;
+	line-height: 66px;
+}
+.iot_drama_r strong img,
+.iot_show_r strong img,
+.iot_mv_r strong img,
+.iot_comic_r strong img,
+.iot_children_r strong img {
+	position: absolute;
+	right: 28px;
+	top: 0;
+	width: 15px;
+	height: 15px;
+	float: right;
+	margin-top: 24px;
+}
+/*右侧部分结束*/
+/*电视剧大模块部分，综艺部分,动漫部分，少儿部分结束*/
+
+/*广告部分开始*/
+.iot_poster1,
+.iot_poster2 {
+	display: block;
+	margin-top: 45px;
+	height: 98px;
+	background-color: pink;
+	border-radius: 5px;
+	background: url(images/gg.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.iot_poster2 {
+	background: url(images/dudu2022.jpg) no-repeat;
+	background-size: cover;
+}
+.iot_poster1 span,
+.iot_poster2 span {
+	position: absolute;
+	width: 35px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	right: 10px;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #fff;
+	font-size: 14px;
+}
+/*广告部分结束*/
+
+/*电影部分开始*/
+/*头部分开始*/
+.iot_mv {
+	height: 750px;
+}
+/*头部分结束*/
+/*左侧部分开始+会员底部分*/
+.iot_mv_l {
+	width: 1114px;
+	height: 700px;
+}
+.iot_mv_l ul li,
+.iot_member_bottom  ul li {
+	display: inline-block;
+	margin-right: 19px;
+	position: relative; /*子绝父相*/
+	width: 200px;
+	height: 325px;
+	overflow: hidden;
+	border-radius: 8px;
+	margin-top:6px;
+}
+.iot_mv_l li a div img,
+.iot_member_bottom li a div img {
+	width: 200px;
+	height: 275px;
+	border-radius: 8px;
+	transition: all 0.5s;
+}
+.iot_mv_l li a div,
+.iot_member_bottom li a div {
+	width: 200px;
+	height: 275px;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.iot_mv_l li a div img:hover,
+.iot_member_bottom li a div img:hover {
+	transform: scale(1.1);
+}
+.iot_mv_l li a span,
+.iot_member_bottom li a span {
+	color: rgba(255, 255, 255, 0.9);
+	text-overflow: ellipsis; /*当对象文本溢出时显示省略标记*/
+}
+.iot_mv_l li a span:hover,
+.iot_member_bottom li a span:hover {
+	color: #61F6FF;
+}
+.iot_mv_l li p,
+.iot_member_bottom li p {
+	font-size: 13px;
+	color: rgba(255, 255, 255, 0.5);
+	margin-top: 6px;
+}
+.iot_mv_l li b,
+.iot_member_bottom li:nth-child(4) b {
+	font-weight: 700;
+	position: absolute;
+	right: 7px;
+	bottom: 47px;
+	color: #61F6FF;
+	font-size: 15px;
+}
+/*左侧部分开始+会员底部分*/
+/*电影部分结束*/
+
+/*会员底部分开始*/
+.iot_member_bottom  {
+	height: 325px;
+	overflow: hidden;
+}
+.iot_member_bottom ul {
+	width: 200%;
+	height: 325px;
+	animation: moving 5s linear infinite; /*引用动画*/
+	/*infinite是无限循环播放的意思*/
+	overflow: hidden;
+}
+/*定义动画*/
+@keyframes moving {
+	from{
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(-1542px);
+	}
+}
+.iot_member_bottom:hover ul {
+	/*鼠标经过时 里面的ul不做动画*/
+	animation-play-state: paused; /*鼠标经过暂停动画*/
+}
+.iot_member_bottom  ul li:nth-child(7n) {
+	margin-right: -1px;
+}
+.iot_member_bottom  ul li:nth-child(8) {
+	margin-left: 19px;
+}
+.iot_member_bottom li b {
+	font-weight: 400;
+	position: absolute;
+	right: 7px;
+	bottom: 47px;
+	color: #fff;
+	font-size: 12px;
+}
+/*会员底部分结束*/
+
+/*页面底部分开始*/
+/*头部分开始*/
+.iot_bottom {
+	box-sizing: border-box;
+	height: 270px;
+	padding-top: 30px;
+	margin-top: 110px;
+	position: relative;
+}
+.iot_bottom img {
+	position: absolute;
+	top: -70px;
+	width: 84px;
+	height: 70px;
+	left: 50%;
+	transform: translate(-50%); /*图片水平居中*/
+}
+.iot_bottom i {
+	position: absolute;
+	top: -40px;
+	left: 830px;
+	font-style: normal;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 12px;
+}
+.iot_bottom dl {
+	display: inline-block;
+	margin-left: 30px;
+	width: 250px;
+	height: 88px;
+}
+.iot_bottom .iot_agree {
+	margin: 0 360px;
+}
+.iot_bottom dl dt {
+	font-size: 14px;
+	color: rgba(255, 255, 255, 0.4);
+}
+.iot_bottom dl div {
+	margin-top: 10px;
+}
+.iot_bottom dl div a {
+	display: inline-block;
+	font-size: 12px;
+	color: rgba(255, 255, 255, 0.7);
+	margin-bottom: 5x;
+}
+.iot_bottom dl div a:hover,
+.iot_bottom_in a:hover,
+.iot_bottom_b a:hover {
+	color: #61F6FF;
+}
+#iot_about a {
+	margin-right: 25px;
+}
+#iot_agreement a {
+	margin-right: 10px;
+}
+#iot_serve a {
+	margin-right: 40px;
+}
+/*头部分结束*/
+/*中间部分开始*/
+.iot_bottom_in {
+	margin: 10px;
+}
+.iot_bottom_in a,
+.iot_bottom_in span {
+	font-size: 12px;
+	padding: 0 15px;
+	border-right: 1px solid rgba(255, 255, 255, 0.4);
+	color: rgba(255, 255, 255, 0.4);
+}
+/*中间部分结束*/
+/*底部分开始*/
+.iot_bottom_b {
+	margin: 0 245px;
+	position: relative;
+}
+.iot_bottom_b a {
+	font-size: 12px;
+	padding: 0 15px;
+	border-right: 1px solid rgba(255, 255, 255, 0.4);
+	color: rgba(255, 255, 255, 0.4);
+}
+.iot_bottom_b img {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+	left: 580px;
+}
+/*底部分结束*/
+/*页面底部分结束*/
