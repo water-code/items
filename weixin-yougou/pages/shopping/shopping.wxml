@@ -1,0 +1,19 @@
+<!--pages/shopping/shopping.wxml-->
+<!-- 商品列表信息 -->
+<view class="goods">
+  <Goods wx:for="{{goodsInfo}}" wx:key="index" goodsList="{{item}}" state="{{state}}" bind:sync="syncState" bind:step="syncCount" bind:del="syncDel" id="goods-{{item.goods_id}}"></Goods>
+</view>
+
+
+<!-- 提交订单栏 -->
+  <van-submit-bar
+    price="{{ amout*100 }}"
+    button-text="提交({{total}})"
+    bind:submit="onClickButton"
+    tip="{{ true }}"
+  >
+  <van-checkbox value="{{ checked }}" bind:change="onChange" checked-color="#c00000">全选</van-checkbox>
+</van-submit-bar>
+
+<!-- 底部tabbar区域 -->
+<NormalFooter goodsInfo="{{goodsInfo}}"  badge="{{badge}}" act="{{2}}"></NormalFooter>

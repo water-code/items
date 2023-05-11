@@ -1,0 +1,26 @@
+<!--Searcher/searchList/searchList.wxml-->
+<van-search
+  value="{{ value }}"
+  shape="round"
+  background="#c00000"
+  placeholder="请输入搜索关键词"
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+
+<!-- 历史记录 -->
+<van-toast id="van-toast" />
+<view class="history" wx:if="{{value == ''}}">
+    <view class="top">
+      <text class="title">历史记录</text>
+      <van-icon name="delete-o" size="25" color="gray" bindtap="empty"/>
+    </view>
+    <view class="content">
+      <view wx:for="{{historyList}}" wx:key="index" bindtap="gotoSearch" data-item="{{item}}">{{item}}</view>
+    </view>
+  </view>
+
+<!-- 下拉框功能实现 -->
+<view wx:else  class="pull-list">
+  <view wx:for="{{searchList}}" wx:key="goods_id">{{item.goods_name}}</view>
+</view>

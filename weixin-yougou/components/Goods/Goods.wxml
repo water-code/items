@@ -1,0 +1,17 @@
+<!--components/Goods/Goods.wxml-->
+
+
+<van-swipe-cell right-width="{{ 65 }}" class="swipe" >
+  <van-toast id="van-toast" />
+  <van-checkbox value="{{ checked }}" bind:change="onChange" checked-color="#c00000" class="checkbox"></van-checkbox>
+  <van-cell-group>
+    <van-card 
+    class="card"
+    price="{{goodsList.goods_price}}"
+    title="{{goodsList.goods_name}}"
+    thumb="{{ goodsList.goods_small_logo }}"
+    />
+  </van-cell-group>
+  <van-stepper value="{{ count }}" bind:change="onStepperChange" class="stepper"/>
+  <view slot="right" class="delete" bindtap="del">删除</view>
+</van-swipe-cell>

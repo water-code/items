@@ -1,0 +1,108 @@
+<!--pages/mine/mine.wxml-->
+
+<!-- 主体内容区域 -->
+
+<view class="container">
+  <!-- 顶部start -->
+  <view class="top">
+    <van-image
+  round
+  width="200rpx"
+  height="200rpx"
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+  />
+  <text style="color: #fff;">Lida</text>
+  </view>
+  <!-- 顶部end -->
+  <view class="box">
+  <!-- box1 start -->
+  <view class="box1">
+    <view class="box1-1">
+      <view class="box1-1-1">
+        8
+      </view>
+      <navigator class="box1-1-2">
+        收藏的店铺
+      </navigator>
+    </view>
+    <view class="box1-1">
+      <view class="box1-1-1">
+        14
+      </view>
+      <navigator class="box1-1-2">
+        收藏的商品
+      </navigator>
+    </view>
+    <view class="box1-1">
+      <view class="box1-1-1">
+        18
+      </view>
+      <navigator class="box1-1-2">
+        关注的商品
+      </navigator>
+    </view>
+    <view class="box1-1">
+      <view class="box1-1-1">
+        84
+      </view>
+      <navigator class="box1-1-2">
+        足迹
+      </navigator>
+    </view>
+  </view>
+  <!-- box1 end -->
+  <!-- box2 start -->
+  <view class="box2">
+    <view class="order">我的订单</view>
+    <!-- 分割线 -->
+    <view class="box2-1">
+      <view>
+        <van-icon name="todo-list-o" color="#c00000"  size="60rpx"/>
+        <text>待付款</text>
+      </view>
+      <view>
+        <van-icon name="logistics" color="#c00000" size="60rpx"/>
+        <text>待收货</text>
+      </view>
+      <view>
+        <van-icon name="after-sale" color="#c00000" size="60rpx" />
+        <text>退货/退款</text>
+      </view>
+      <view>
+        <van-icon name="description" color="#c00000" size="60rpx" />
+        <text>全部订单</text>
+      </view>
+    </view>
+  </view>
+  <!-- box2 end -->
+  <!-- box3 start -->
+  <van-dialog id="van-dialog"/>
+  <view class="box3">
+    <view class="box3-1">
+     收货地址<view class="icon">></view> 
+    </view>
+    <!-- 分割线 -->
+    <view class="hr"></view>
+    <view class="box3-1">
+     联系客服<view class="icon">></view> 
+    </view>
+    <!-- 分割线 -->
+    <view class="hr"></view>
+    <view class="box3-1" bindtap="logout">
+     退出登录<view class="icon">></view> 
+    </view>
+    
+  </view>
+
+  <!-- box3 end -->
+
+  <!-- 退出登录弹窗 -->
+
+
+  </view>
+</view>
+
+
+
+<!-- 底部tabbar区域 -->
+<NormalFooter act="{{3}}"></NormalFooter>

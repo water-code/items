@@ -1,0 +1,13 @@
+<!--components/normalFooter/normalFooter.wxml-->
+<van-tabbar
+  active="{{ active }}"
+  active-color="#c00000"
+  inactive-color="#000"
+  bind:change="onChange"
+  class="tabbar"
+>
+  <van-tabbar-item icon="home-o" bindtap="goHome">首页</van-tabbar-item>
+  <van-tabbar-item icon="qr-invalid" bindtap="goClass" >分类</van-tabbar-item>
+  <van-tabbar-item icon="shopping-cart-o" bindtap="goCar"  info="{{info}}">购物车</van-tabbar-item>
+  <van-tabbar-item icon="friends-o" bindtap="goSelf" >我的</van-tabbar-item>
+</van-tabbar>

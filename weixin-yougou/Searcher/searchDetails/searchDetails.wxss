@@ -1,0 +1,23 @@
+/* Searcher/searchDetails/searchDetails.wxss */
+.swiper image{
+  height: 100%;
+  width: 100%;
+}
+.swiper {
+  height: 750rpx;
+  width: 100%;
+}
+.price {
+  font-size: 50rpx;
+  color: #c00000;
+  margin-bottom: 20rpx;
+}
+.title {
+  font-size: 28rpx;
+}
+.info {
+  margin: 40rpx 20rpx;
+}
+.rich-text {
+  padding-bottom: 200rpx;
+}

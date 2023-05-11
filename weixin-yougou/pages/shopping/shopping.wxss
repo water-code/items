@@ -1,0 +1,9 @@
+/* pages/shopping/shopping.wxss */
+
+.van-submit-bar {
+  margin-bottom: 100rpx;
+  border: 1px solid #efefef;
+}
+.goods {
+  padding-bottom: 200rpx;
+}

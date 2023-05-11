@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/classification/classification",
+    "pages/shopping/shopping",
+    "pages/self/self",
+    "pages/mine/mine",
+    "pages/empty/empty"
+  ],
+  "subpackages": [
+    {
+      "root": "Searcher",
+      "pages": [
+        "searchList/searchList",
+        "searchShow/searchShow",
+        "searchDetails/searchDetails"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#c00000",
+    "navigationBarTitleText": "麦乐优购",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "NormalFooter": "/components/normalFooter/normalFooter",
+    "Goods": "/components/Goods/Goods",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-goods-action": "@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "preloadRule": {
+    "pages/home/home": {
+      "network": "all",
+      "packages": [
+        "Searcher"
+      ]
+    }
+  }
+}

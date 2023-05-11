@@ -1,0 +1,31 @@
+/* pages/classification/classification.wxss */
+.van-search {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.wrapper {
+  margin-top: 108rpx;
+  display: flex;
+  height: 1000rpx;
+}
+.nav {
+  background-color: #F7F7F7;
+  width: 30%;
+}
+.nav view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+  font-size: 14px;
+}
+.title {
+  width: 100%;
+  text-align: center;
+}
+.active {
+  border-left: 6rpx solid #c00000;
+  background-color: #fff;
+}

@@ -1,0 +1,77 @@
+/* pages/mine/mine.wxss */
+.container {
+  padding: 0;
+}
+page {
+  background-color: #efefef;
+}
+.top{
+  width: 100%;
+  background-color: #c00000;
+  height: 360rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.box{
+  width: 700rpx;
+  position: relative;
+  top: -20rpx;
+}
+.box1{
+  display: flex;
+  height: 100rpx;
+  font-size: 28rpx;
+  background-color: white;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.box1-1{
+
+  text-align: center;
+}
+.box1-1-1{
+  align-items: center;
+}
+.box2{
+  background-color: white;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+.order{
+  padding:0 30rpx;
+}
+.box2-1{
+  display: flex;
+  justify-content:space-around;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.box2-1 view image{
+  width: 120rpx;
+  height: 90rpx;
+}
+.box2-1 view{
+  width: 140rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+.box3{
+  background-color: white;
+  border-radius: 10rpx;
+}
+.box3-1{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  padding-left: 10rpx;
+}
+.icon{
+  padding-right: 30rpx;
+  color:rgb(167,164,164)
+}

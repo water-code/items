@@ -1,0 +1,4 @@
+<!--pages/empty/empty.wxml-->
+<van-empty image="error" description="未登录状态,无法查看购物车" class="empty"/>
+<NormalFooter act="{{2}}"></NormalFooter>
+                                                    

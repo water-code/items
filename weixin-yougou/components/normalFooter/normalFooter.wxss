@@ -1,0 +1,5 @@
+/* components/normalFooter/normalFooter.wxss */
+.user,
+.pass {
+  margin-top: 500rpx;
+}

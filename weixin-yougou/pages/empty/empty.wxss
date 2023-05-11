@@ -1,0 +1,4 @@
+/* pages/empty/empty.wxss */
+.van-empty__image {
+  margin-top: 200rpx;
+}
