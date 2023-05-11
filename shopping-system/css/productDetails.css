@@ -1,0 +1,177 @@
+/* 一.初始化开始 */
+.container {
+    height: 565px !important;
+    overflow:auto;   /* 超出盒子高度显示滚动条  */
+}
+.top {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+}
+.top a {
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #fff;
+}
+.top span {
+    margin-right: 25px;
+}
+/* 一.初始化结束 */
+
+/* 二.底部加入购物车栏开始 */
+.addProduct {
+    height: 53px;
+    border: 1px solid #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.addProduct ul {
+    height: 53px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.addProduct li.iconfont {
+    display: flex;
+    flex-direction: column;
+    color: #796d6c;
+    font-size: 30px;
+}
+.iconfont span {
+    font-size: 13px;
+    margin-left: 4px;
+}
+.click {
+    display: flex;
+    width: 250px;
+    height: 40px;
+}
+.click span {
+    height: 100%;
+    line-height: 40px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+.click span:first-child {
+    border-radius: 20px 0 0 20px;
+    background-color: #ff0000;
+}
+.click span:last-child {
+    border-radius: 0 20px 20px 0;
+    background-color: #ffa200;
+}
+/* 底部商品图标开始 */
+.shopping_car {
+    right: 5px;
+}
+/* 底部商品图标结束 */
+/* 二.底部加入购物车栏结束 */
+
+/* 三.轮播图开始 */
+.banner {
+    height: 386px;
+    position: relative;
+    top: 0;
+    overflow: hidden;
+}
+/* 1.核心滚动区域开始 */
+.scroll {
+    position: relative;
+    margin-left: -100%;
+    display: flex;
+}
+.scroll img {
+    width: 362px;
+    height: 386px;
+}
+/* 1.核心滚动区域开始 */
+/* 2.小圆点部分开始 */
+.circle {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.circle li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
+}
+li.current {
+    background-color: #000;
+}
+/* 2.小圆点部分结束 */
+/* 三.轮播图结束 */
+
+/* 四.商品介绍栏开始 */
+.introduce {
+    height: 95px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.introduce div {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.introduce div span:first-child {
+    width: 75%;
+    border-right: 1px solid #ccc;
+}
+.introduce #price {
+    color: #c00000;
+    font-size: 17px;
+}
+.introduce .iconfont {
+    color: #ccc;
+    width: 25%;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconfont i {
+    font-style: normal;
+    font-size: 13px;
+    margin-left: 10px;
+}
+#free {
+    font-size: 12px;
+    color: #ccc;
+}
+/* 四.商品介绍栏结束 */
+
+/* 五.放大镜开始 */
+.display {
+    width: 362px;
+    height: 667px;
+    background-color: #000;
+    margin: 0 auto;
+    display: none;
+}
+.hidden{
+    width: 362px;
+    height: 400px; 
+    background-color: pink;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hidden img {
+    width: 100%;
+    height: 400px;
+}
+/* 五.放大镜结束 */

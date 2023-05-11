@@ -1,0 +1,228 @@
+/* 初始化开始 */
+.container {
+    height: 510px !important;
+    overflow:auto; /* 超出盒子高度显示滚动条 */
+}
+.top {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+}
+.top a {
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #fff;
+}
+.top span {
+    margin-right: 25px;
+}
+/* 初始化结束 */
+
+/* 复选框修改样式 */
+.form2 {
+    position: relative;
+}
+.form2 input {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
+input[type='checkbox'] {
+    width: 28px;
+    height: 28px;
+    -webkit-appearance: none; 
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    outline: none;
+    vertical-align: middle;
+}
+input[type='checkbox']:checked {
+    background: url('../image/yes.png') no-repeat;
+    background-size: cover;
+}
+/* 复选框修改样式 */
+
+/* 购物车栏开始 */
+
+/* 1.收货信息栏开始 */
+.empty{
+    width: 95px;
+    height: 95px;
+    margin: 200px auto;
+    display: none;
+}
+.empty span {
+    color: #ccc;
+    margin-left: 15px;
+}
+.address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95px;
+    border-bottom: 4px solid #c00000;
+}
+.address .address_add {
+    width: 142px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #1AAD19;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+}
+.get {
+    font-size: 13px;
+    padding-left: 10px;
+    align-items: center;
+    width: 362px;
+    height: 95px;
+    position: relative;
+    top: 0px;
+    display: none;
+}
+.get label input {
+    width: 125px;
+    border: none;
+    outline: 0;
+}
+.get label:last-child {
+    position: absolute;
+    bottom: 20px;
+}
+.get label:nth-child(1),
+.get label:nth-child(2) {
+    position: absolute;
+    top: 20px;
+}
+.get label:nth-child(2) {
+    right: 20px;
+}
+/* 1.收货信息栏结束 */
+
+/* 2.购物车提示栏开始 */
+.has i {
+    font-style: normal;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+    padding-left: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.has .car{
+    font-size: 14px;
+    position: absolute;
+    left: 35px;
+    top: 0;
+}
+/* 2.购物车提示栏结束 */
+
+/* 3.购物车详细栏开始*/
+.productList li {
+    width: 100%;
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.productList .left {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+.productList img {
+    width: 100px;
+    height: 100%;
+}
+.productList .right {
+    width: 60%;
+    color: #000;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    position: relative;
+}
+.right #price {
+    color: #c00000;
+}
+.include {
+    width: 120px;
+    position: relative;
+    float: right;
+    /* background-color: pink; */
+    bottom: 45px;
+    right: 10px;
+}
+.add_num {
+    /* background-color: pink; */
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 18px;
+    border: 1px solid #ccc;
+}
+.add_num .add,
+.add_num .reduce {
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    width: 50%;
+}
+.add_num input {
+    border: 0;
+    outline: none;
+    width: 30px;
+    text-align: center;
+    margin-top: 5px;
+}
+/* 3.购物车详细栏结束 */
+
+/* 4.全选栏开始 */
+.choose_all {
+    height: 60px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+.left_choose {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+.left_choose span {
+    margin-left: 10px;
+}
+.amount {
+    font-size: 15px;
+}
+.settlement {
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #c00000;
+    color: #fff;
+    font-size: 15px;
+}
+.dollar {
+    color: #c00000;
+}
+/* 4.全选栏开始 */
+
+/* 购物车栏开始 */

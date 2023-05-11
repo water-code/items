@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_3573168_5umctyz45ee.css">
+    <link rel="stylesheet" href="../css/productList.css">
+    <link rel="stylesheet" href="../css/start.css">
+    <!-- 导入分类主页面 -->
+    <script src="../js/productList.js"></script>
+    <!-- 导入ajax函数 -->
+    <script src="../js/ajax.js"></script>
+    <!-- 导入模板引擎 -->
+    <script src="../js/art-template.js"></script>
+</head>
+<body>
+    <!-- 一.头部搜索栏开始 -->
+    <div class="cover main" style="height:50px">
+        <div class="header main" style="height:50px">
+            <div class="top">
+                <a href="classification.html">＜</a>
+                <span>黑马优购</span>
+            </div>
+            <div class="more">
+                <span class="iconfont icon-gengduo"></span>
+                <span class="iconfont icon-dingwei"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 一.头部搜索栏结束 -->
+
+    <!-- 二.商品列表项开始 -->
+    <div class="container main">
+        <ul class="productList">
+            <!-- 定义模板 -->
+            <script type="text/html" id="productList">
+                {{each message.goods}} 
+                {{if $value.goods_small_logo !== ''}}
+                <a href="#" data-num="{{$value.goods_id}}">
+                    <li>
+                        <img src="{{$value.goods_small_logo}}">
+                        <div class="right">
+                            <span>{{$value.goods_name}} </span>
+                            <span id="price">￥{{$value.goods_price}}</span>
+                        </div>
+                    </li>
+                </a>
+                {{/if}}
+                {{/each}}
+            </script>
+        </ul>
+    </div>
+    <!-- 二.商品列表项结束 -->
+
+</body>
+</html>

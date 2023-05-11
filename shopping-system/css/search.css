@@ -1,0 +1,80 @@
+/* 1.页面头部分开始 */
+.return {
+    position: absolute;
+    left: 16px;
+    top: 4px;
+    font-size: 30px;
+    color: #fff;
+}
+.search .iconfont.icon-sousuo {
+    left: 15px;
+    font-size: 20px;
+}
+.search i {
+    font-style: normal;
+    width: 24px;
+    height: 26px;
+    line-height: 24px;
+    background-color: pink;
+    border-radius: 50%;
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    font-size: 20px;
+    background-color: #999;
+}
+
+/* 1.页面头部分结束 */
+
+/* 2.搜索列表开始 */
+.container {
+    height: 567px;
+    overflow: auto;
+    display: none;
+}
+.container li {
+    height: 48px;
+    line-height: 48px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+    padding-right: 25px;
+    position: relative;
+}
+.container li span {
+    font-size: 1px;
+    display: inline-block;
+    width: 100%;
+    /* 超出盒子宽度显示省略号 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container li i {
+    font-style: normal;
+    position: absolute;
+    right: 10px;
+    color: gray;
+    font-size: 20px;
+}
+/* 2.搜索列表结束 */
+
+/* 3.搜索历史开始 */
+.history_top span {
+    font-size: 14px;
+}
+.history_top {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.history_bottom span {
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px;
+}
+/* 3.搜索历史结束 */

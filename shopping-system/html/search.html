@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_3573168_exyrdqcif8p.css">
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <!-- 导入模板引擎 -->
+    <script src="../js/art-template.js"></script>
+    <!-- 导入ajax函数 -->
+    <script src="../js/ajax.js"></script>
+    <!-- 导入搜索js -->
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <!-- 一.头部搜索栏开始 -->
+    <div class="cover main">
+        <div class="header main">
+            <a class="return" href="#"><</a>
+            <span>黑马优购</span>
+            <div class="search">
+                <input type="text">
+                <span class="iconfont icon-sousuo"></span>   
+                <i class="false">×</i>
+            </div>
+            <div class="more">
+                <span class="iconfont icon-gengduo"></span>
+                <span class="iconfont icon-dingwei"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 一.头部搜索栏结束 -->  
+
+    <!-- 二.搜索列表开始 -->
+    <ul class="container main">
+        <!-- 定义模板 -->
+        <script type="text/html" id="search-list">
+            {{each message}}
+            <li>
+                <span>{{$value.goods_name}}</span>
+                <i>></i>
+            </li>
+            {{/each}}
+        </script>
+    </ul>
+    <!-- 二.搜索列表结束 -->
+
+    <!-- 三.搜索历史开始 -->
+    <div class="history main">
+        <div class="history_top">
+            <span>搜索历史</span>
+            <i class="iconfont icon-shanchu remove"></i>
+        </div>
+        <div class="history_bottom">
+            <span></span>
+        </div>
+    </div>
+    <!-- 三.搜索历史结束 -->
+</body>
+</html>

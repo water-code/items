@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/c/font_3573168_exyrdqcif8p.css">
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/homePage.css">
+    <!-- 导入模板引擎 -->
+    <script src="../js/art-template.js"></script>
+    <!-- 导入ajax函数 -->
+    <script src="../js/ajax.js"></script>
+    <!-- 导入轮播函数 -->
+    <script src="../js/Rotation.js"></script>
+    <!-- 导入首页js -->
+    <script src="../js/homePage.js"></script>
+</head>
+<body>
+    <!-- 一.头部搜索栏开始 -->
+    <div class="cover main">
+        <div class="header main">
+            <span>黑马优购</span>
+            <div class="search">
+                <input type="text">
+                <span class="iconfont icon-sousuo">搜索</span>   
+            </div>
+            <div class="more">
+                <span class="iconfont icon-gengduo"></span>
+                <span class="iconfont icon-dingwei"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 一.头部搜索栏结束 -->
+
+    <!--二. 底部菜单栏开始 -->
+    <div class="footer main">
+        <ul>
+            <a href="homePage.html">
+                <li>
+                    <span class="iconfont icon-shouye"></span>
+                    <span>首页</span>
+                </li>
+            </a>
+            <a href="classification.html">
+                <li>
+                    <span class="iconfont icon-2"></span>
+                    <span>分类</span>
+                </li>
+            </a>
+            <a href="Shopping.html">
+                <li class="shopping">
+                    <span class="iconfont icon-gouwuche"></span>
+                    <span>购物车</span>
+                    <b class="shopping_car">4</b>
+                </li>
+            </a>
+            <a href="myself.html">
+                <li>
+                    <span class="iconfont icon-wode-wode"></span>
+                    <span>我的</span>
+                </li>
+            </a>
+        </ul>
+    </div>
+    <!-- 二.底部菜单栏结束 -->  
+
+    <div class="container main">
+        <!-- 三.轮播图开始 -->
+        <div class="banner">
+            <!-- 1.核心滚动区域开始 -->
+            <ul class="scroll">
+                <!-- 定义模板开始 -->
+                <script type="text/html" id="Rotation">
+                    {{each message}}
+                        <li>
+                            <a href="{{$value.navigator_url}}">
+                                <img src="{{$value.image_src}}" />
+                            </a>
+                        </li>
+                    {{/each}}
+                </script>
+                <!-- 定义模板结束 -->
+            </ul>
+            <!-- 1.核心滚动区域结束 -->
+
+            <!-- 2.小圆点部分开始 -->
+            <ul class="circle">
+            </ul>
+            <!-- 2.小圆点部分结束 -->
+        </div>
+        <!-- 三.轮播图结束 -->
+
+        <!-- 四.菜单导航栏开始 -->
+        <div class="nav">
+            <ul>
+                <script type="text/html" id="nav">
+                    <!-- 定义模板 -->
+                    {{each message}}
+                    <li>
+                        <img src="{{$value.image_src}}">
+                    </li>
+                    {{/each}}
+                </script>
+            </ul>
+        </div>
+        <!-- 四.菜单导航栏结束 -->
+
+        <!-- 五.商品栏开始 -->
+        <div class="product">
+
+        </div>
+        <script type="text/html" id="market">
+            <!-- 定义模板 -->
+            {{each message}}
+            <div class="market">
+                <div class="title">
+                    <a href="#" title="{{$value.floor_title.name}}"><img src="{{$value.floor_title.image_src}}"></a>
+                </div>
+                <div class="content">
+                    {{each $value.product_list}}
+                    <div class="item">
+                        <a href="#" title="{{$value.name}}"><img src="{{$value.image_src}}"></a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/each}}
+        </script>
+        <!-- 五.商品栏结束 -->
+
+    </div>
+</body>
+</html>

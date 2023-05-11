@@ -1,0 +1,220 @@
+/* 初始化开始 */
+.container {
+    height: 616px !important;
+    overflow:auto; /* 超出盒子高度显示滚动条 */
+}
+.top {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+}
+.top a {
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #fff;
+}
+.top span {
+    margin-right: 25px;
+}
+/* 初始化结束 */
+
+/* 一.未登录部分开始 */
+.head {
+    margin-top: 100px;
+    height: 200px;
+}
+.head i {
+    font-size: 92px;
+    color: #AFAFAF;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    left: 35%;
+}
+.head .one {
+    width: 80%;
+    height: 44px;
+    line-height: 44px;
+    background-color: #c00000;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.head span {
+    font-size: 12px;
+    color: #AFAFAF;
+    position: relative;
+    left: 35%;
+    top: 10px;
+}
+/* 一.未登录部分结束 */
+
+/* 二.已登录部分开始 */
+.login {
+    display: none;
+}
+/* 1.头像部分开始 */
+.log_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    background-color: #c00000;
+}
+.log_top div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+}
+.log_top div img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.log_top div span {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 30px;
+}
+/* 1.头像部分结束 */
+
+/* 2.banner部分开始 */
+.banner {
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+    width: 350px;
+    height: 58px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.banner li span {
+    font-size: 13px;
+}
+.banner li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 2.banner部分开结束 */
+
+/* 3.order订单部分开始 */
+.bottom {
+    height: 356px;
+    background-color: #F4F4F4;
+}
+.order {
+    width: 350px;
+    height: 125px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.order>span {
+    display: block;
+    font-size: 15px;
+    margin-left: 20px;
+}
+.order ul {
+    display: flex;
+    height: 80px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+}
+.order ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.order ul li i {
+    font-size: 35px;
+    color: #DB6063;
+}
+.order ul li span {
+    font-size: 13px;
+}
+/* 3.order订单部分结束 */
+/* 4.logout部分开始 */
+.logout {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    width: 350px;
+    height: 140px;
+    margin: 10px auto;
+    background-color: #fff;
+}
+.logout li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+/* 4.logout部分结束 */
+/* 二.已登录部分结束 */
+
+/* 三.退出确认框开始 */
+.quit {
+    width: 318px;
+    height: 190px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 2;
+    display: none;
+}
+.quit_up {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.quit_up span {
+    margin-top: 10px;
+}
+.quit_down {
+    height: 30%;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    display: flex;
+}
+.quit_down span {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quit_down span:first-child {
+    border-right: 1px solid #ccc;
+}
+/* 遮挡框开始 */
+.hid {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    width: 364px;
+    height: 100%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+/* 遮挡框结束 */
+/* 三.退出确认框结束 */

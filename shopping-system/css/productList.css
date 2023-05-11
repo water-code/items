@@ -1,0 +1,44 @@
+/* 初始化开始 */
+.container {
+    height: 616px !important;
+    overflow:auto; /* 超出盒子高度显示滚动条 */
+}
+.top {
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+}
+.top a {
+    float: left;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #fff;
+}
+.top span {
+    margin-right: 25px;
+}
+/* 初始化结束 */
+/* 商品列表项开始 */
+.productList li {
+    width: 100%;
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.productList img {
+    width: 110px;
+    height: 100%;
+}
+.productList .right {
+    color: #000;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.right #price {
+    color: #c00000;
+}
+/* 商品列表项结束 */

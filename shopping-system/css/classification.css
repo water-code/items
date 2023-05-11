@@ -1,0 +1,60 @@
+/* 商品分类开始 */
+
+/* 左侧导航栏开始 */
+.left {
+    height: 520px;
+    overflow:auto; /* 超出盒子高度显示滚动条 */
+    float: left;
+    width: 25%;
+    background-color: #f7f7f7;
+}
+.left li {
+    display: flex;
+    align-items: center;
+    height: 64px;
+}
+.left li span {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.current_l {
+    border-left: 3px solid #c00000;
+}
+/* 右侧导航栏开始 */
+.detail {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    float: right;
+    width: 75%;
+    height: 520px;
+    overflow:auto; /* 超出盒子高度显示滚动条 */
+}
+.detail .title {
+    grid-column: 1/4;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+}
+.detail li {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    height: 120px;
+}
+.detail li img {
+    width: 100%;
+    height: 100%;
+}
+.detail li span {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+/* 商品分类结束 */
